@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_hub/core/helper/function/navigate_page.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
-import 'package:fruit_hub/features/splash/presentation/functions/navigate_page.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CustomPageViewItem extends StatelessWidget {

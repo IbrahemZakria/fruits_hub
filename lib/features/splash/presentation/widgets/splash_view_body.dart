@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub/core/helper/function/navigate_page.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/cubits/localization/localization_cubit.dart';
-import 'package:fruit_hub/features/splash/presentation/functions/navigate_page.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});

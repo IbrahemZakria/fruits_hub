@@ -11,6 +11,81 @@
     "onBoarSubTitle2":"نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     "@onBoarSubTitle2": {}
     ,"start_now":"ابدأ الأن ",
-    "@start_now": {}
+    "@start_now": {},
+    "required_password": "يرجى إدخال كلمة المرور",
+    "@required_password": {}, 
+    "password": "كلمة المرور",
+    "@password": {},
+    "email": "البريد الالكترونى",
+    "@email": {},
+    "did_you_forgot_password": " هل نسيت كلمة المرور؟",
+    "@did_you_forgot_password": {},
+    "wrong_password": "كلمة المرور غير صحيحة",
+    "@wrong_password": {},
+    "login": "تسجيل الدخول",
+    "@login": {},
+    "change_password_message":"تم إرسال رسالة نصية إلى {phone_number}، أدخل الرمز المكون من 4 أرقام",
+    "@change_password_message": {
+        "description": "Message shown when changing password",
+        "placeholders": {
+            "phone_number": {
+                "example": "1234567890",
+                "description": "User's phone number"
+            }
+        }
+    },
+    "Resend_code_time":"إعادة إرسال الرمز خلال {time}",
+    "@Resend_code_time": {
+        "description": "Message shown when the user can resend the code",
+        "placeholders": {
+            "time": {
+                "example": "00:54",
+                "description": "Time remaining to resend the code"
+            }
+        }
+    }
+    ,"confirm": "تأكيد",
+    "@confirm": {},
+    "change_password": "تغيير كلمة المرور",
+    "@change_password": {},
+    "new_password": "كلمة المرور الجديدة",
+    "@new_password": {},
+    "confirm_new_password": "تأكيد كلمة المرور الجديدة",
+    "@confirm_new_password": {},
+    "passwords_dose_not_match": "كلمة المرور غير متطابقة",
+    "@passwords_dose_not_match": {},
+    "password_changed_successfully": "تم تغيير كلمة المرور بنجاح",
+    "@password_changed_successfully": {}
+  
+    ,"contact_us":"تواصل معنا",
+    "@contact_us": {},
+    "about_us":"معلومات عنا",
+    "@about_us": {}
+    ,"forgot_password":"نسيت كلمة المرور",
+    "@forgot_password": {}
+    ,"password_mismatch":"كلمة المرور غير متطابقة",
+    "@password_mismatch": {},
+    "otp":" التحقق الثنائى",
+    "@otp": {}
+    ,"wrong_data":"لو سمحت ادخل قيمه صحيحه",
+    "@wrong_data": {},
+    "please_enter_valid_email":"لو سمحت ادخل ايميل صالح لاستخدام",
+    "@please_enter_valid_email": {},
+    "Please_enter_your_email":"لو سمحت ادخل الايميل الخاص بك",
+    "@Please_enter_your_email": {},
+    "dont_have_an_account":"لا تمتلك حساب ؟ ",
+    "@dont_have_an_account": {},
+    "create_account":"قم بإنشاء حساب",
+    "@create_account": {},
+    "or":"أو",
+    "@or": {},
+    "login_with_googel":"تسجيل الدخول بواسطه جوجل",
+    "@login_with_googel": {},
+    "login_with_facebook":"تسجيل الدخول بواسطه فيسبوك",
+    "@login_with_facebook": {},
+    "login_with_appel":"تسجيل الدخول بواسطه أبل",
+    "@login_with_appel": {}
+
+
     
 }

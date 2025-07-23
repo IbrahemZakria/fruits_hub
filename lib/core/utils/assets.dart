@@ -6,6 +6,18 @@ class Assets {
   /// assets/images/app_icon.png
   static const String assetsImagesAppIcon = "assets/images/app_icon.png";
 
+  /// Assets for assetsImagesAppelIcon
+  /// assets/images/appel_icon.svg
+  static const String assetsImagesAppelIcon = "assets/images/appel_icon.svg";
+
+  /// Assets for assetsImagesFacebookIcon
+  /// assets/images/facebook_icon.svg
+  static const String assetsImagesFacebookIcon = "assets/images/facebook_icon.svg";
+
+  /// Assets for assetsImagesGoogelIcon
+  /// assets/images/googel_icon.svg
+  static const String assetsImagesGoogelIcon = "assets/images/googel_icon.svg";
+
   /// Assets for assetsImagesLogo
   /// assets/images/logo.svg
   static const String assetsImagesLogo = "assets/images/logo.svg";

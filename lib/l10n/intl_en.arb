@@ -11,6 +11,82 @@
     "onBoarSubTitle2":"We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to make sure you're choosing the perfect fruit.",
     "@onBoarSubTitle2": {}
     ,"start_now":"Start Now",
-    "@start_now": {}
+    "@start_now": {},
+    "required_password": "Please enter your password",
+    "@required_password": {},
+    "password": "Password",
+    "@password": {},
+    "Email": "Email",
+    "@Email": {},
+    "wrong_password": "Wrong password",
+    "@wrong_password": {},
+    "did_you_forgot_password": "Forgot password?",
+    "@did_you_forgot_password": {},
+    "login": "Login",
+    "@login": {},
+    "change_password_message":"A text message has been sent to {phone_number}, enter the 4-digit code",
+    "@change_password_message": {
+        "description": "Message shown when changing password",
+        "placeholders": {
+            "phone_number": {
+                "example": "1234567890",
+                "description": "User's phone number"
+            }
+        }
+    },
+    "Resend_code_time":"Resend  code within {time}",
+    "@Resend_code_time": {
+        "description": "Message shown when the user can resend the code",
+        "placeholders": {
+            "time": {
+                "example": "00:54",
+                "description": "Time remaining to resend the code"
+            }
+        }
+    }
+    ,"confirm": "Confirm",
+    "@confirm": {}
+    ,"change_password": "Change Password",
+    "@change_password": {},
+    "new_password": "New Password",
+    "@new_password": {},
+    "confirm_new_password": "Confirm New Password",
+    "@confirm_new_password": {},
+    "passwords_dose_not_match": "Passwords dose not match",
+    "@passwords_dose_not_match": {},
+    "password_changed_successfully": "Password changed successfully",
+    "@password_changed_successfully": {}
+    ,"enter_id":"Enter your ID number",
+    "@enter_id": {}
+    ,"contact_us":"Contact Us",
+    "@contact_us": {},"about_us":"About Us",
+    "@about_us": {}
+    ,"forgot_password":" Forgot Password",
+    "@forgot_password": {}
+    ,"password_mismatch":"Passwords do not match",
+    "@password_mismatch": {}
+    ,"otp":"OTP",
+    "@otp": {}
+    ,"wrong_data":"plase enter a valid data",
+    "@wrong_data": {},
+    "please_enter_valid_email":"Please enter a valid email",
+    "@please_enter_valid_email": {},
+    "dont_have_an_account":"don't have an account ? ",
+    "@dont_have_an_account": {},
+    "Please_enter_your_email":"Please enter your email",
+    "@Please_enter_your_email": {},
+    "create_account":"create account",
+    "@create_account": {},
+    "or":"or",
+    "@or": {},
+    "login_with_googel":"Login with googel",
+    "@login_with_googel": {},
+    "login_with_facebook":"Login with facebook",
+    "@login_with_facebook": {},
+    "login_with_appel":"Login with appel",
+    "@login_with_appel": {}
+
+
+
 
 }
