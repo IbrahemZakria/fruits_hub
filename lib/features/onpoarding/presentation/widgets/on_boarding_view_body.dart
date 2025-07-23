@@ -3,6 +3,7 @@ import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/widgts/custom_button.dart';
 import 'package:fruit_hub/features/onpoarding/presentation/widgets/custom_page_view_item.dart';
 import 'package:fruit_hub/features/onpoarding/presentation/widgets/page_view_dot_indicator.dart';
+import 'package:fruit_hub/features/splash/presentation/functions/navigate_page.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -78,7 +79,17 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 top: 29,
                 bottom: 43,
               ),
-              child: CustomButton(onTap: () {}, text: S.of(context).start_now),
+              child: CustomButton(
+                onTap: () {
+                  NavigatePage.addOnBoardingState();
+
+                  Navigator.pushReplacementNamed(
+                    context,
+                    NavigatePage.routeName(),
+                  );
+                },
+                text: S.of(context).start_now,
+              ),
             ),
           ),
         ],

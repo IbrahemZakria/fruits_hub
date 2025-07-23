@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
+import 'package:fruit_hub/features/splash/presentation/functions/navigate_page.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CustomPageViewItem extends StatelessWidget {
@@ -40,7 +41,17 @@ class CustomPageViewItem extends StatelessWidget {
                   child: Positioned(
                     right: 24,
                     top: 24,
-                    child: Text(S.of(context).skip),
+                    child: TextButton(
+                      onPressed: () {
+                        NavigatePage.addOnBoardingState();
+
+                        Navigator.pushReplacementNamed(
+                          context,
+                          NavigatePage.routeName(),
+                        );
+                      },
+                      child: Text(S.of(context).skip),
+                    ),
                   ),
                 ),
               ],

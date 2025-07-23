@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/cubits/localization/localization_cubit.dart';
-import 'package:fruit_hub/features/onpoarding/presentation/pages/on_boarding_view.dart';
+import 'package:fruit_hub/features/splash/presentation/functions/navigate_page.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -16,9 +16,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 5), () {
       if (!mounted) return;
-      Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+      Navigator.pushReplacementNamed(context, NavigatePage.routeName());
     });
   }
 

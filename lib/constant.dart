@@ -1,4 +1,5 @@
 class Constant {
   static const languageCode = 'language';
-  static const productBox = 'productBox';
+  static const isOnoarding = 'isOnoarding';
+  static const token = 'token';
 }
