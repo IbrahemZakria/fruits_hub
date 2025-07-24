@@ -45,5 +45,9 @@ class Assets {
   /// Assets for assetsImagesSplashPlant
   /// assets/images/splash-Plant.svg
   static const String assetsImagesSplashPlant = "assets/images/splash-Plant.svg";
+
+  /// Assets for assetsImagesWrightCheckBox
+  /// assets/images/Wright_check_box.svg
+  static const String assetsImagesWrightCheckBox = "assets/images/Wright_check_box.svg";
 }
 

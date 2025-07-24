@@ -27,22 +27,32 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
     "Please_enter_your_email": MessageLookupByLibrary.simpleMessage(
       "لو سمحت ادخل الايميل الخاص بك",
     ),
+    "Please_enter_your_name": MessageLookupByLibrary.simpleMessage(
+      "لو سمحت ادخل اسمك ",
+    ),
     "Resend_code_time": m0,
+    "Terms_and_Conditions": MessageLookupByLibrary.simpleMessage(
+      " الشروط والأحكام الخاصة بنا",
+    ),
     "Welcome_to": MessageLookupByLibrary.simpleMessage("مرحبا بك ف "),
     "about_us": MessageLookupByLibrary.simpleMessage("معلومات عنا"),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
     "change_password_message": m1,
+    "checkbox_content": MessageLookupByLibrary.simpleMessage(
+      "من خلال إنشاء حساب ، فإنك توافق على",
+    ),
     "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور الجديدة",
     ),
     "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
-    "create_account": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "create_account": MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
     "did_you_forgot_password": MessageLookupByLibrary.simpleMessage(
       " هل نسيت كلمة المرور؟",
     ),
@@ -50,6 +60,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "لا تمتلك حساب ؟ ",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+    "have_an_account": MessageLookupByLibrary.simpleMessage(
+      "تمتلك حساب بالفعل  ",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "login_with_appel": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطه أبل",
@@ -60,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "login_with_googel": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطه جوجل",
     ),
+    "name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+    "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
     "onBoarSubTitle1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",

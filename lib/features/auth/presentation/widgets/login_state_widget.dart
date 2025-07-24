@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_hub/core/utils/thems.dart';
 
 class LoginStateWidget extends StatelessWidget {
   const LoginStateWidget({
@@ -25,6 +26,7 @@ class LoginStateWidget extends StatelessWidget {
         onPressed: () {},
         child: ListTile(
           visualDensity: VisualDensity(vertical: VisualDensity.minimumDensity),
+          titleTextStyle: Thems.textStyle16sb,
           title: Text(title, textAlign: TextAlign.center),
           leading: SvgPicture.asset(image),
         ),

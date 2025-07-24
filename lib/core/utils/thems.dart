@@ -19,6 +19,11 @@ class Thems {
     fontSize: 19,
     color: black,
   );
+  static TextStyle textStyle16sb = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    color: black,
+  );
   static TextStyle textStyle13SB = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 13,

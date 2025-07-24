@@ -31,11 +31,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "Please_enter_your_email": MessageLookupByLibrary.simpleMessage(
       "Please enter your email",
     ),
+    "Please_enter_your_name": MessageLookupByLibrary.simpleMessage(
+      "please enter your name",
+    ),
     "Resend_code_time": m0,
+    "Terms_and_Conditions": MessageLookupByLibrary.simpleMessage(
+      "Terms and Conditions.",
+    ),
     "Welcome_to": MessageLookupByLibrary.simpleMessage("Welcome to"),
     "about_us": MessageLookupByLibrary.simpleMessage("About Us"),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
+    "checkbox_content": MessageLookupByLibrary.simpleMessage(
+      "By creating an account, you agree to our",
+    ),
     "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "confirm_new_password": MessageLookupByLibrary.simpleMessage(
       "Confirm New Password",
@@ -50,6 +59,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "enter_id": MessageLookupByLibrary.simpleMessage("Enter your ID number"),
     "forgot_password": MessageLookupByLibrary.simpleMessage(" Forgot Password"),
+    "have_an_account": MessageLookupByLibrary.simpleMessage(
+      "Alredy have an account ? ",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "login_with_appel": MessageLookupByLibrary.simpleMessage(
       "Login with appel",
@@ -60,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "login_with_googel": MessageLookupByLibrary.simpleMessage(
       "Login with googel",
     ),
+    "name": MessageLookupByLibrary.simpleMessage("All name"),
+    "new_account": MessageLookupByLibrary.simpleMessage("New account"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
     "onBoarSubTitle1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",

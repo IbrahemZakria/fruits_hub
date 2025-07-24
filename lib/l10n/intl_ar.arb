@@ -16,8 +16,8 @@
     "@required_password": {}, 
     "password": "كلمة المرور",
     "@password": {},
-    "email": "البريد الالكترونى",
-    "@email": {},
+    "Email": "البريد الالكترونى",
+    "@Email": {},
     "did_you_forgot_password": " هل نسيت كلمة المرور؟",
     "@did_you_forgot_password": {},
     "wrong_password": "كلمة المرور غير صحيحة",
@@ -75,7 +75,7 @@
     "@Please_enter_your_email": {},
     "dont_have_an_account":"لا تمتلك حساب ؟ ",
     "@dont_have_an_account": {},
-    "create_account":"قم بإنشاء حساب",
+    "create_account":" إنشاء حساب جديد",
     "@create_account": {},
     "or":"أو",
     "@or": {},
@@ -84,7 +84,22 @@
     "login_with_facebook":"تسجيل الدخول بواسطه فيسبوك",
     "@login_with_facebook": {},
     "login_with_appel":"تسجيل الدخول بواسطه أبل",
-    "@login_with_appel": {}
+    "@login_with_appel": {},
+    "new_account":"حساب جديد",
+    "@new_account": {},
+    "Please_enter_your_name":"لو سمحت ادخل اسمك ",
+    "@Please_enter_your_name": {},
+    "name":"الاسم بالكامل",
+    "@name": {},
+    "have_an_account":"تمتلك حساب بالفعل  ",
+    "@have_an_account": {},
+    "Terms_and_Conditions":" الشروط والأحكام الخاصة بنا",
+    "@Terms_and_Conditions": {},
+    "checkbox_content":"من خلال إنشاء حساب ، فإنك توافق على",
+    "@checkbox_content": {}
+
+    
+
 
 
     
