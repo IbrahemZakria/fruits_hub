@@ -96,7 +96,24 @@
     "Terms_and_Conditions":"Terms and Conditions.",
     "@Terms_and_Conditions": {},
     "checkbox_content":"By creating an account, you agree to our",
-    "@checkbox_content": {}
+    "@checkbox_content": {},
+    "acceptTerms": "Please accept the terms and conditions",
+    "@acceptTerms": {},
+    "weakPassword": "The password provided is too weak.",
+    "@weakPassword": {},
+    "emailAlreadyInUse": "The account already exists for that email.",
+    "@emailAlreadyInUse": {},
+    "unknownError": "An unknown error occurred: please try again later",
+    "@unknownError": {},
+    "signUpSuccess": "Sign-up successful",
+    "@signUpSuccess": {},
+    "noInternet": "There is a problem with the internet connection",
+    "@noInternet": {},
+      "invalidEmailOrPassword": "There is a problem with the email or password",
+      "@invalidEmailOrPassword": {},
+        "loginSuccess": "Login successful",
+        "@loginSuccess": {}
+
 
 
 

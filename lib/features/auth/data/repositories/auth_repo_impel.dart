@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_hub/core/exceptions/custom_exception.dart';
@@ -15,6 +17,7 @@ class AuthRepoImpel extends AuthRepo {
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
     required String email,
     required String password,
+    required String name,
   }) async {
     try {
       User user = await firebaseAuthServices.createUserWithEmailAndPassword(
@@ -23,7 +26,25 @@ class AuthRepoImpel extends AuthRepo {
       );
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
-      return left(FirebaseServerFailure(errorMessage: e.toString()));
+      log("message: ${e.message}");
+      return left(FirebaseServerFailure(errorMessage: e.message.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      User user = await firebaseAuthServices.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return Right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      log("message: ${e.message}");
+      return left(FirebaseServerFailure(errorMessage: e.message.toString()));
     }
   }
 }

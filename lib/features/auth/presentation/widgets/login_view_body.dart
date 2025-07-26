@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/core/utils/widgts/custom_button.dart';
-import 'package:fruit_hub/core/utils/widgts/user_message.dart';
+import 'package:fruit_hub/features/auth/presentation/cubit/sign_in_cubit/sign_in_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/create_account.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/login_state_widget.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/text_form_field_widget/email_form_field.dart';
@@ -30,6 +31,7 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(height: size.height * .019),
               PassFormField(passwordController: passwordController),
               SizedBox(height: size.height * .019),
+              // ده بتاعه نسيت كلمه السر
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -51,11 +53,15 @@ class LoginViewBody extends StatelessWidget {
                 ],
               ),
               SizedBox(height: size.height * .0134),
+              // ده زرار تسجيل الدخول
               CustomButton(
                 text: S.of(context).login,
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
-                    Usermessage.show(message: 'message');
+                    context.read<SignInCubit>().signInWithEmailAndPassword(
+                      email: emailControler.text,
+                      password: passwordController.text,
+                    );
                   }
                 },
               ),

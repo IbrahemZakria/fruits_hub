@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:fruit_hub/features/auth/domain/repositories/auth_repo.dart';
-import 'package:fruit_hub/features/auth/presentation/cubit/sign_up_cuit/sign_up_state.dart';
+import 'package:fruit_hub/features/auth/presentation/cubit/sign_up_cbuit/sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
   SignUpCubit(this.authRepo) : super(SignUpInitial());
@@ -8,11 +8,13 @@ class SignUpCubit extends Cubit<SignUpState> {
   Future<void> signUpWithEmailAndPassword({
     required String email,
     required String password,
+    required String name,
   }) async {
     emit(SignUpLoadingState());
     final result = await authRepo.createUserWithEmailAndPassword(
       email: email,
       password: password,
+      name: name,
     );
 
     result.fold(

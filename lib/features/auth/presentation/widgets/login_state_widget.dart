@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 
+// دى بتاعه طريقه التسجيل زى جوجل و ابل وفيسبوك
 class LoginStateWidget extends StatelessWidget {
   const LoginStateWidget({
     super.key,

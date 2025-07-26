@@ -40,6 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Welcome_to": MessageLookupByLibrary.simpleMessage("مرحبا بك ف "),
     "about_us": MessageLookupByLibrary.simpleMessage("معلومات عنا"),
+    "acceptTerms": MessageLookupByLibrary.simpleMessage(
+      "الرجاء الموافقه على الشروط والاحكام",
+    ),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
@@ -59,11 +62,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "dont_have_an_account": MessageLookupByLibrary.simpleMessage(
       "لا تمتلك حساب ؟ ",
     ),
+    "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+      "يوجد حساب بالفعل مرتبط بهذا البريد الإلكتروني.",
+    ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
     "have_an_account": MessageLookupByLibrary.simpleMessage(
       "تمتلك حساب بالفعل  ",
     ),
+    "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
+      "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح",
+    ),
     "login_with_appel": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطه أبل",
     ),
@@ -76,6 +88,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+    "noInternet": MessageLookupByLibrary.simpleMessage(
+      "يوجد مشكلة في الاتصال بالإنترنت",
+    ),
     "onBoarSubTitle1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
     ),
@@ -101,8 +116,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال كلمة المرور",
     ),
     "search_markteng": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "signUpSuccess": MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
     "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الأن "),
+    "unknownError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير معروف: الرجاء المحاولة مرة أخرى لاحقاً",
+    ),
+    "weakPassword": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور التي تم إدخالها ضعيفة جداً.",
+    ),
     "wrong_data": MessageLookupByLibrary.simpleMessage(
       "لو سمحت ادخل قيمه صحيحه",
     ),

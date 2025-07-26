@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/features/auth/presentation/widgets/create_account_body.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/core/utils/services/get_it_services.dart';
+import 'package:fruit_hub/features/auth/domain/repositories/auth_repo.dart';
+import 'package:fruit_hub/features/auth/presentation/cubit/sign_up_cbuit/sign_up_cubit.dart';
+import 'package:fruit_hub/features/auth/presentation/widgets/bloc_consumer_signup_body.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CreateAccount extends StatelessWidget {
@@ -8,9 +12,12 @@ class CreateAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(S.of(context).new_account)),
-      body: CreateAccountBody(),
+    return BlocProvider(
+      create: (context) => SignUpCubit(getIt<AuthRepo>()),
+      child: Scaffold(
+        appBar: AppBar(title: Text(S.of(context).new_account)),
+        body: BlocConsumerSignupBody(),
+      ),
     );
   }
 }

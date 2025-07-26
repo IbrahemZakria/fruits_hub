@@ -40,6 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "Welcome_to": MessageLookupByLibrary.simpleMessage("Welcome to"),
     "about_us": MessageLookupByLibrary.simpleMessage("About Us"),
+    "acceptTerms": MessageLookupByLibrary.simpleMessage(
+      "Please accept the terms and conditions",
+    ),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(
@@ -57,12 +60,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "dont_have_an_account": MessageLookupByLibrary.simpleMessage(
       "don\'t have an account ? ",
     ),
+    "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+      "The account already exists for that email.",
+    ),
     "enter_id": MessageLookupByLibrary.simpleMessage("Enter your ID number"),
     "forgot_password": MessageLookupByLibrary.simpleMessage(" Forgot Password"),
     "have_an_account": MessageLookupByLibrary.simpleMessage(
       "Alredy have an account ? ",
     ),
+    "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
+      "There is a problem with the email or password",
+    ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "loginSuccess": MessageLookupByLibrary.simpleMessage("Login successful"),
     "login_with_appel": MessageLookupByLibrary.simpleMessage(
       "Login with appel",
     ),
@@ -75,6 +85,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "name": MessageLookupByLibrary.simpleMessage("All name"),
     "new_account": MessageLookupByLibrary.simpleMessage("New account"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
+    "noInternet": MessageLookupByLibrary.simpleMessage(
+      "There is a problem with the internet connection",
+    ),
     "onBoarSubTitle1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",
     ),
@@ -102,8 +115,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "search_markteng": MessageLookupByLibrary.simpleMessage(
       "Search and Marcting",
     ),
+    "signUpSuccess": MessageLookupByLibrary.simpleMessage("Sign-up successful"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
+    "unknownError": MessageLookupByLibrary.simpleMessage(
+      "An unknown error occurred: please try again later",
+    ),
+    "weakPassword": MessageLookupByLibrary.simpleMessage(
+      "The password provided is too weak.",
+    ),
     "wrong_data": MessageLookupByLibrary.simpleMessage(
       "plase enter a valid data",
     ),

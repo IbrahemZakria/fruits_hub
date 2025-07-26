@@ -96,7 +96,26 @@
     "Terms_and_Conditions":" الشروط والأحكام الخاصة بنا",
     "@Terms_and_Conditions": {},
     "checkbox_content":"من خلال إنشاء حساب ، فإنك توافق على",
-    "@checkbox_content": {}
+    "@checkbox_content": {},  
+    "acceptTerms": "الرجاء الموافقه على الشروط والاحكام",
+    "@acceptTerms": {},
+      "weakPassword": "كلمة المرور التي تم إدخالها ضعيفة جداً.",
+  "@weakPassword": {},
+  "emailAlreadyInUse": "يوجد حساب بالفعل مرتبط بهذا البريد الإلكتروني.",
+  "@emailAlreadyInUse": {},
+  "unknownError": "حدث خطأ غير معروف: الرجاء المحاولة مرة أخرى لاحقاً",
+  "@unknownError": {},
+  "signUpSuccess": "تم التسجيل بنجاح",
+  "@signUpSuccess": {},
+  "noInternet": "يوجد مشكلة في الاتصال بالإنترنت",
+  "@noInternet": {},
+    "invalidEmailOrPassword": "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور",
+    "@invalidEmailOrPassword": {},
+      "loginSuccess": "تم تسجيل الدخول بنجاح",
+      "@loginSuccess": {}
+
+
+
 
     
 

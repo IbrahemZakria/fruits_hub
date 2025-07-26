@@ -398,6 +398,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Please accept the terms and conditions`
+  String get acceptTerms {
+    return Intl.message(
+      'Please accept the terms and conditions',
+      name: 'acceptTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get weakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred: please try again later`
+  String get unknownError {
+    return Intl.message(
+      'An unknown error occurred: please try again later',
+      name: 'unknownError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign-up successful`
+  String get signUpSuccess {
+    return Intl.message(
+      'Sign-up successful',
+      name: 'signUpSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is a problem with the internet connection`
+  String get noInternet {
+    return Intl.message(
+      'There is a problem with the internet connection',
+      name: 'noInternet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is a problem with the email or password`
+  String get invalidEmailOrPassword {
+    return Intl.message(
+      'There is a problem with the email or password',
+      name: 'invalidEmailOrPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login successful`
+  String get loginSuccess {
+    return Intl.message(
+      'Login successful',
+      name: 'loginSuccess',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
