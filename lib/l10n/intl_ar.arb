@@ -112,7 +112,18 @@
     "invalidEmailOrPassword": "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور",
     "@invalidEmailOrPassword": {},
       "loginSuccess": "تم تسجيل الدخول بنجاح",
-      "@loginSuccess": {}
+      "@loginSuccess": {},
+
+  "signInCancelled": "تم إلغاء عملية تسجيل الدخول.",
+  "@signInCancelled": {},
+  "accountExistsWithDifferentCredential": "يوجد حساب مرتبط بمزود آخر لتسجيل الدخول.",
+  "@accountExistsWithDifferentCredential": {},
+  "platformError": "حدث خطأ في النظام. يرجى المحاولة مرة أخرى.",
+  "@platformError": {},
+  "timeout": "انتهت مهلة الطلب. تأكد من اتصالك بالإنترنت.",
+  "@timeout": {},
+  "googleSignInFailed": "فشل تسجيل الدخول باستخدام Google. حاول مرة أخرى.",
+  "@googleSignInFailed": {}
 
 
 

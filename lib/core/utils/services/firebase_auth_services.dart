@@ -1,8 +1,12 @@
+import 'dart:async';
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
 import 'package:fruit_hub/core/exceptions/custom_exception.dart';
 import 'package:fruit_hub/generated/l10n.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class FirebaseAuthServices {
   Future<User> createUserWithEmailAndPassword({
@@ -66,6 +70,71 @@ class FirebaseAuthServices {
       }
     } catch (e) {
       log(e.toString());
+      throw CustomException(S.current.unknownError);
+    }
+  }
+
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  Future<User> signInWithGoogle() async {
+    try {
+      if (kIsWeb) {
+        final googleProvider = GoogleAuthProvider();
+        final userCredential = await _auth.signInWithPopup(googleProvider);
+        return userCredential.user!;
+      } else {
+        final googleSignIn = GoogleSignIn.instance;
+
+        await googleSignIn.initialize();
+
+        final googleUser = await googleSignIn.authenticate();
+
+        final googleAuth = googleUser.authentication;
+
+        final credential = GoogleAuthProvider.credential(
+          idToken: googleAuth.idToken,
+        );
+
+        final userCredential = await _auth.signInWithCredential(credential);
+        return userCredential.user!;
+      }
+    }
+    // 🔻 Firebase Authentication Errors
+    on FirebaseAuthException catch (e) {
+      switch (e.code) {
+        case 'user-not-found':
+        case 'wrong-password':
+        case 'invalid-credential':
+          throw CustomException(S.current.invalidEmailOrPassword);
+        case 'account-exists-with-different-credential':
+          throw CustomException(S.current.accountExistsWithDifferentCredential);
+        case 'network-request-failed':
+          throw CustomException(S.current.noInternet);
+        case 'popup-blocked':
+        case 'popup-closed-by-user':
+          throw CustomException(S.current.signInCancelled);
+        default:
+          log("FirebaseAuthException: ${e.code}");
+          throw CustomException(S.current.unknownError);
+      }
+    }
+    // 🔻 Platform Errors (mostly native issues)
+    on PlatformException catch (e) {
+      log("📱 Platform Exception: ${e.code} — ${e.message}");
+      throw CustomException(S.current.platformError);
+    }
+    // 🔻 Timeout
+    on TimeoutException catch (e) {
+      log("⏳ Timeout Exception: ${e.message}");
+      throw CustomException(S.current.timeout);
+    }
+    // 🔻 Google Sign-in SDK error
+    on GoogleSignInException catch (e) {
+      log("🔑 Google Sign-In Exception: ${e.code}");
+      throw CustomException(S.current.googleSignInFailed);
+    }
+    // 🔻 Any unknown error
+    catch (e) {
+      log("❌ Unknown Error: $e");
       throw CustomException(S.current.unknownError);
     }
   }

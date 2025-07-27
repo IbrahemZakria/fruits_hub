@@ -43,6 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "acceptTerms": MessageLookupByLibrary.simpleMessage(
       "الرجاء الموافقه على الشروط والاحكام",
     ),
+    "accountExistsWithDifferentCredential":
+        MessageLookupByLibrary.simpleMessage(
+          "يوجد حساب مرتبط بمزود آخر لتسجيل الدخول.",
+        ),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
@@ -66,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "يوجد حساب بالفعل مرتبط بهذا البريد الإلكتروني.",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+    "googleSignInFailed": MessageLookupByLibrary.simpleMessage(
+      "فشل تسجيل الدخول باستخدام Google. حاول مرة أخرى.",
+    ),
     "have_an_account": MessageLookupByLibrary.simpleMessage(
       "تمتلك حساب بالفعل  ",
     ),
@@ -109,6 +116,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير متطابقة",
     ),
+    "platformError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ في النظام. يرجى المحاولة مرة أخرى.",
+    ),
     "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
       "لو سمحت ادخل ايميل صالح لاستخدام",
     ),
@@ -116,9 +126,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى إدخال كلمة المرور",
     ),
     "search_markteng": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+    "signInCancelled": MessageLookupByLibrary.simpleMessage(
+      "تم إلغاء عملية تسجيل الدخول.",
+    ),
     "signUpSuccess": MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
     "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الأن "),
+    "timeout": MessageLookupByLibrary.simpleMessage(
+      "انتهت مهلة الطلب. تأكد من اتصالك بالإنترنت.",
+    ),
     "unknownError": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ غير معروف: الرجاء المحاولة مرة أخرى لاحقاً",
     ),

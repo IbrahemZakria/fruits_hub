@@ -112,7 +112,18 @@
       "invalidEmailOrPassword": "There is a problem with the email or password",
       "@invalidEmailOrPassword": {},
         "loginSuccess": "Login successful",
-        "@loginSuccess": {}
+        "@loginSuccess": {},
+
+  "signInCancelled": "Sign-in was cancelled.",
+  "@signInCancelled": {},
+  "accountExistsWithDifferentCredential": "An account already exists with a different credential.",
+  "@accountExistsWithDifferentCredential": {},
+  "platformError": "A platform error occurred. Please try again.",
+  "@platformError": {},
+  "timeout": "The request timed out. Please check your connection.",
+  "@timeout": {},
+  "googleSignInFailed": "Google Sign-In failed. Please try again.",
+  "@googleSignInFailed": {}
 
 
 

@@ -10,10 +10,18 @@ import 'package:fruit_hub/features/auth/presentation/widgets/text_form_field_wid
 import 'package:fruit_hub/features/auth/presentation/widgets/text_form_field_widget/pass_form_field.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
-class LoginViewBody extends StatelessWidget {
-  LoginViewBody({super.key});
+class LoginViewBody extends StatefulWidget {
+  const LoginViewBody({super.key});
+
+  @override
+  State<LoginViewBody> createState() => _LoginViewBodyState();
+}
+
+class _LoginViewBodyState extends State<LoginViewBody> {
   final TextEditingController emailControler = TextEditingController();
+
   final TextEditingController passwordController = TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -37,12 +45,7 @@ class LoginViewBody extends StatelessWidget {
                 children: [
                   TextButton(
                     style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                    onPressed: () {
-                      // Navigator.pushNamed(
-                      //   context,
-                      //   ForgotPasswordView.routeName,
-                      // );
-                    },
+                    onPressed: () {},
                     child: Text(
                       S.of(context).did_you_forgot_password,
                       style: Thems.textStyle13SB.copyWith(
@@ -99,7 +102,9 @@ class LoginViewBody extends StatelessWidget {
               LoginStateWidget(
                 image: Assets.assetsImagesGoogelIcon,
                 title: S.of(context).login_with_googel,
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithGoogle();
+                },
               ),
               SizedBox(height: size.height * .019),
               LoginStateWidget(

@@ -43,6 +43,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "acceptTerms": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions",
     ),
+    "accountExistsWithDifferentCredential":
+        MessageLookupByLibrary.simpleMessage(
+          "An account already exists with a different credential.",
+        ),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(
@@ -65,6 +69,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "enter_id": MessageLookupByLibrary.simpleMessage("Enter your ID number"),
     "forgot_password": MessageLookupByLibrary.simpleMessage(" Forgot Password"),
+    "googleSignInFailed": MessageLookupByLibrary.simpleMessage(
+      "Google Sign-In failed. Please try again.",
+    ),
     "have_an_account": MessageLookupByLibrary.simpleMessage(
       "Alredy have an account ? ",
     ),
@@ -106,6 +113,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
       "Passwords dose not match",
     ),
+    "platformError": MessageLookupByLibrary.simpleMessage(
+      "A platform error occurred. Please try again.",
+    ),
     "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email",
     ),
@@ -115,9 +125,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "search_markteng": MessageLookupByLibrary.simpleMessage(
       "Search and Marcting",
     ),
+    "signInCancelled": MessageLookupByLibrary.simpleMessage(
+      "Sign-in was cancelled.",
+    ),
     "signUpSuccess": MessageLookupByLibrary.simpleMessage("Sign-up successful"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
+    "timeout": MessageLookupByLibrary.simpleMessage(
+      "The request timed out. Please check your connection.",
+    ),
     "unknownError": MessageLookupByLibrary.simpleMessage(
       "An unknown error occurred: please try again later",
     ),

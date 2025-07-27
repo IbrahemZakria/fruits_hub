@@ -122,36 +122,6 @@ class _CreateAccountBodyState extends State<CreateAccountBody> {
                   ),
                 ],
               ),
-              // SizedBox(height: size.height * .0134),
-              // Row(
-              //   children: [
-              //     Expanded(child: Divider(color: Thems.lightgray)),
-              //     Padding(
-              //       padding: const EdgeInsets.all(8.0),
-              //       child: Text(local.or),
-              //     ),
-              //     Expanded(child: Divider(color: Thems.lightgray)),
-              //   ],
-              // ),
-              // SizedBox(height: size.height * .019),
-              // LoginStateWidget(
-              //   image: Assets.assetsImagesGoogelIcon,
-              //   title: local.login_with_googel,
-              //   onPressed: () {},
-              // ),
-              // SizedBox(height: size.height * .019),
-              // LoginStateWidget(
-              //   image: Assets.assetsImagesAppelIcon,
-              //   title: local.login_with_appel,
-              //   onPressed: () {},
-              // ),
-
-              // SizedBox(height: size.height * .019),
-              // LoginStateWidget(
-              //   image: Assets.assetsImagesFacebookIcon,
-              //   title: local.login_with_facebook,
-              //   onPressed: () {},
-              // ),
             ],
           ),
         ),

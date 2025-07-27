@@ -24,7 +24,7 @@ class LoginStateWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: ListTile(
           visualDensity: VisualDensity(vertical: VisualDensity.minimumDensity),
           titleTextStyle: Thems.textStyle16sb,

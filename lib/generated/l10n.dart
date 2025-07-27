@@ -478,6 +478,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign-in was cancelled.`
+  String get signInCancelled {
+    return Intl.message(
+      'Sign-in was cancelled.',
+      name: 'signInCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An account already exists with a different credential.`
+  String get accountExistsWithDifferentCredential {
+    return Intl.message(
+      'An account already exists with a different credential.',
+      name: 'accountExistsWithDifferentCredential',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A platform error occurred. Please try again.`
+  String get platformError {
+    return Intl.message(
+      'A platform error occurred. Please try again.',
+      name: 'platformError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The request timed out. Please check your connection.`
+  String get timeout {
+    return Intl.message(
+      'The request timed out. Please check your connection.',
+      name: 'timeout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Google Sign-In failed. Please try again.`
+  String get googleSignInFailed {
+    return Intl.message(
+      'Google Sign-In failed. Please try again.',
+      name: 'googleSignInFailed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
