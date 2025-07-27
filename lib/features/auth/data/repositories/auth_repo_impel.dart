@@ -58,4 +58,15 @@ class AuthRepoImpel extends AuthRepo {
       return left(FirebaseServerFailure(errorMessage: e.message.toString()));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    try {
+      User user = await firebaseAuthServices.signInWithFacebook();
+      return Right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      log("message: ${e.message}");
+      return left(FirebaseServerFailure(errorMessage: e.message.toString()));
+    }
+  }
 }

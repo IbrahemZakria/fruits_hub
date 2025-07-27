@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruit_hub/core/exceptions/custom_exception.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -135,6 +136,66 @@ class FirebaseAuthServices {
     // 🔻 Any unknown error
     catch (e) {
       log("❌ Unknown Error: $e");
+      throw CustomException(S.current.unknownError);
+    }
+  }
+
+  Future<User> signInWithFacebook() async {
+    try {
+      await FacebookAuth.instance
+          .logOut()
+          .then((value) {
+            log("lkgslfsmvdl;kzv");
+          })
+          .catchError((error) {
+            log("Facebook logout error: $error");
+          });
+      // 💥 مهم جدًا
+
+      final LoginResult result = await FacebookAuth.instance.login(
+        loginBehavior:
+            LoginBehavior.nativeWithFallback, // بيخلي المستخدم يختار الحساب
+
+        permissions: ['email', 'public_profile'],
+      );
+      if (result.status == LoginStatus.success) {
+        final OAuthCredential facebookAuthCredential =
+            FacebookAuthProvider.credential(result.accessToken!.tokenString);
+
+        final credential = await FirebaseAuth.instance.signInWithCredential(
+          facebookAuthCredential,
+        );
+
+        return credential.user!;
+      } else if (result.status == LoginStatus.cancelled) {
+        throw CustomException(
+          S.current.signInCancelled,
+        ); // المستخدم لغى العملية
+      } else {
+        log(result.message ?? 'Unknown Facebook login error');
+        throw CustomException(
+          S.current.googleSignInFailed,
+        ); // نستخدم نفس الرسالة لو عايز تغيرها لفيسبوك قول
+      }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'account-exists-with-different-credential') {
+        log(e.code.toString());
+
+        throw CustomException(S.current.accountExistsWithDifferentCredential);
+      } else if (e.code == 'invalid-credential') {
+        log(e.code.toString());
+
+        throw CustomException(S.current.invalidEmailOrPassword);
+      } else if (e.code == 'network-request-failed') {
+        log(e.code.toString());
+
+        throw CustomException(S.current.noInternet);
+      } else {
+        log(e.code.toString());
+        throw CustomException(S.current.unknownError);
+      }
+    } catch (e) {
+      log("///////////${e.toString()}");
       throw CustomException(S.current.unknownError);
     }
   }

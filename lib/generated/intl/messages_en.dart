@@ -43,10 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "acceptTerms": MessageLookupByLibrary.simpleMessage(
       "Please accept the terms and conditions",
     ),
-    "accountExistsWithDifferentCredential":
-        MessageLookupByLibrary.simpleMessage(
-          "An account already exists with a different credential.",
-        ),
+    "accountExistsWithDifferentCredential": MessageLookupByLibrary.simpleMessage(
+      "This email is already registered using a different sign-in method. Please use the original sign-in method.",
+    ),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(

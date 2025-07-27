@@ -43,10 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "acceptTerms": MessageLookupByLibrary.simpleMessage(
       "الرجاء الموافقه على الشروط والاحكام",
     ),
-    "accountExistsWithDifferentCredential":
-        MessageLookupByLibrary.simpleMessage(
-          "يوجد حساب مرتبط بمزود آخر لتسجيل الدخول.",
-        ),
+    "accountExistsWithDifferentCredential": MessageLookupByLibrary.simpleMessage(
+      "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية.",
+    ),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),

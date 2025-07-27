@@ -116,8 +116,8 @@
 
   "signInCancelled": "تم إلغاء عملية تسجيل الدخول.",
   "@signInCancelled": {},
-  "accountExistsWithDifferentCredential": "يوجد حساب مرتبط بمزود آخر لتسجيل الدخول.",
-  "@accountExistsWithDifferentCredential": {},
+  "accountExistsWithDifferentCredential": "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية."
+ , "@accountExistsWithDifferentCredential": {},
   "platformError": "حدث خطأ في النظام. يرجى المحاولة مرة أخرى.",
   "@platformError": {},
   "timeout": "انتهت مهلة الطلب. تأكد من اتصالك بالإنترنت.",

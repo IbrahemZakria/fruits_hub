@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
+import 'package:fruit_hub/core/utils/services/firebase_auth_services.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/core/utils/widgts/custom_button.dart';
+import 'package:fruit_hub/features/auth/domain/repositories/auth_repo.dart';
 import 'package:fruit_hub/features/auth/presentation/cubit/sign_in_cubit/sign_in_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/create_account.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/login_state_widget.dart';
@@ -56,7 +59,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 ],
               ),
               SizedBox(height: size.height * .0134),
-              // ده زرار تسجيل الدخول
+              //  ده زرار تسجيل الدخول بابمل وباسورد
               CustomButton(
                 text: S.of(context).login,
                 onTap: () {
@@ -99,6 +102,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 ],
               ),
               SizedBox(height: size.height * .019),
+              // ده زرار تسجيل الدخول بواسطه جوجل
               LoginStateWidget(
                 image: Assets.assetsImagesGoogelIcon,
                 title: S.of(context).login_with_googel,
@@ -107,6 +111,8 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 },
               ),
               SizedBox(height: size.height * .019),
+
+              // ده زرار تسجيل الدخول بواسطه ابل
               LoginStateWidget(
                 image: Assets.assetsImagesAppelIcon,
                 title: S.of(context).login_with_appel,
@@ -114,10 +120,14 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               ),
 
               SizedBox(height: size.height * .019),
+
+              // ده زرار تسجيل الدخول بواسطه فيسبوك
               LoginStateWidget(
                 image: Assets.assetsImagesFacebookIcon,
                 title: S.of(context).login_with_facebook,
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithFacebook();
+                },
               ),
             ],
           ),

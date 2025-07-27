@@ -489,10 +489,10 @@ class S {
     );
   }
 
-  /// `An account already exists with a different credential.`
+  /// `This email is already registered using a different sign-in method. Please use the original sign-in method.`
   String get accountExistsWithDifferentCredential {
     return Intl.message(
-      'An account already exists with a different credential.',
+      'This email is already registered using a different sign-in method. Please use the original sign-in method.',
       name: 'accountExistsWithDifferentCredential',
       desc: '',
       args: [],

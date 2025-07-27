@@ -116,14 +116,15 @@
 
   "signInCancelled": "Sign-in was cancelled.",
   "@signInCancelled": {},
-  "accountExistsWithDifferentCredential": "An account already exists with a different credential.",
-  "@accountExistsWithDifferentCredential": {},
+  "accountExistsWithDifferentCredential": "This email is already registered using a different sign-in method. Please use the original sign-in method."
+,  "@accountExistsWithDifferentCredential": {},
   "platformError": "A platform error occurred. Please try again.",
   "@platformError": {},
   "timeout": "The request timed out. Please check your connection.",
   "@timeout": {},
   "googleSignInFailed": "Google Sign-In failed. Please try again.",
   "@googleSignInFailed": {}
+
 
 
 
