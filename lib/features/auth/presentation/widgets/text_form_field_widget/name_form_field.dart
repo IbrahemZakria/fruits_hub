@@ -3,14 +3,14 @@ import 'package:fruit_hub/core/utils/widgts/custome_text_form_field.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class NameFormField extends StatelessWidget {
-  const NameFormField({super.key, this.emailControler, this.validator});
-  final TextEditingController? emailControler;
+  const NameFormField({super.key, this.nameControler, this.validator});
+  final TextEditingController? nameControler;
   final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
     return CustomeTextFormField.custometextformfield(
-      controller: emailControler,
+      controller: nameControler,
       validator: validator != null
           ? (value) {
               return validator!(value);

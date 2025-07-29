@@ -40,7 +40,7 @@ class _CreateAccountBodyState extends State<CreateAccountBody> {
           padding: EdgeInsets.all(16),
           child: Column(
             children: [
-              NameFormField(emailControler: nameControler),
+              NameFormField(nameControler: nameControler),
 
               SizedBox(height: size.height * .019),
 

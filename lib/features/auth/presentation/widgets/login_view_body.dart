@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
-import 'package:fruit_hub/core/utils/services/firebase_auth_services.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/core/utils/widgts/custom_button.dart';
-import 'package:fruit_hub/features/auth/domain/repositories/auth_repo.dart';
 import 'package:fruit_hub/features/auth/presentation/cubit/sign_in_cubit/sign_in_cubit.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/create_account.dart';
 import 'package:fruit_hub/features/auth/presentation/widgets/login_state_widget.dart';

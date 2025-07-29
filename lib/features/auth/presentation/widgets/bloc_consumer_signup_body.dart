@@ -16,7 +16,7 @@ class BlocConsumerSignupBody extends StatelessWidget {
       listener: (context, state) {
         if (state is SignUpSuccessState) {
           Usermessage.show(
-            message: "${S.current.signUpSuccess} : ${state.user.email}",
+            message: "${S.current.signUpSuccess} : ${state.user.name}",
           );
           // Handle successful sign-up, e.g., navigate to home page
         } else if (state is SignUpFailureState) {
