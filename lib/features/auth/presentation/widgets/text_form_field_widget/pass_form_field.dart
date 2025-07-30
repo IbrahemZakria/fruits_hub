@@ -12,7 +12,7 @@ class PassFormField extends StatefulWidget {
 }
 
 class _PassFormFieldState extends State<PassFormField> {
-  bool isPasswordVisible = false;
+  bool isPasswordVisible = true;
   @override
   Widget build(BuildContext context) {
     return CustomeTextFormField.custometextformfield(

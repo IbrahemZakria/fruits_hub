@@ -34,7 +34,6 @@ class AuthRepoImpel extends AuthRepo {
         name: name,
         uid: user.uid,
       );
-      log(name);
 
       //  دى اللى بتضيف اليوزر للفيرستور
       await addUserData(user: userentity);
@@ -69,10 +68,17 @@ class AuthRepoImpel extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    User? user;
     try {
-      User user = await firebaseAuthServices.signInWithGoogle();
+      user = await firebaseAuthServices.signInWithGoogle();
+      await addUserData(user: UserModel.fromFirebaseUser(user));
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
+      if (user != null) {
+        await deleteUser();
+        log("message user deleted}");
+        return left(FirebaseServerFailure(errorMessage: e.message.toString()));
+      }
       log("message: ${e.message}");
       return left(FirebaseServerFailure(errorMessage: e.message.toString()));
     }
@@ -80,10 +86,18 @@ class AuthRepoImpel extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    User? user;
     try {
-      User user = await firebaseAuthServices.signInWithFacebook();
+      user = await firebaseAuthServices.signInWithFacebook();
+      await addUserData(user: UserModel.fromFirebaseUser(user));
+
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
+      if (user != null) {
+        await deleteUser();
+        log("message user deleted}");
+        return left(FirebaseServerFailure(errorMessage: e.message.toString()));
+      }
       log("message: ${e.message}");
       return left(FirebaseServerFailure(errorMessage: e.message.toString()));
     }
@@ -91,15 +105,11 @@ class AuthRepoImpel extends AuthRepo {
 
   @override
   Future addUserData({required UserEntity user}) async {
-    try {
-      throw CustomException("fgkljdj");
-
-      await fireStoreServices.addData(EndPoints.addUserData, user.toMap());
-    } on CustomException catch (e) {
-      throw CustomException(e.message);
-
-      // TODO
-    }
+    await fireStoreServices.addData(
+      path: EndPoints.addUserData,
+      data: user.toMap(),
+      documentId: user.uid,
+    );
   }
 
   @override
