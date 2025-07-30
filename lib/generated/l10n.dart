@@ -144,13 +144,13 @@ class S {
     return Intl.message('Login', name: 'login', desc: '', args: []);
   }
 
-  /// `A text message has been sent to {phone_number}, enter the 4-digit code`
-  String change_password_message(Object phone_number) {
+  /// `A text message has been sent to {phoneNumber}, enter the 4-digit code`
+  String change_password_message(Object phoneNumber) {
     return Intl.message(
-      'A text message has been sent to $phone_number, enter the 4-digit code',
+      'A text message has been sent to $phoneNumber, enter the 4-digit code',
       name: 'change_password_message',
       desc: 'Message shown when changing password',
-      args: [phone_number],
+      args: [phoneNumber],
     );
   }
 

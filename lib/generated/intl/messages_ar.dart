@@ -22,8 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(time) => "إعادة إرسال الرمز خلال ${time}";
 
-  static String m1(phone_number) =>
-      "تم إرسال رسالة نصية إلى ${phone_number}، أدخل الرمز المكون من 4 أرقام";
+  static String m1(phoneNumber) =>
+      "تم إرسال رسالة نصية إلى ${phoneNumber}، أدخل الرمز المكون من 4 أرقام";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{

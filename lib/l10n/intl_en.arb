@@ -24,11 +24,11 @@
     "@did_you_forgot_password": {},
     "login": "Login",
     "@login": {},
-    "change_password_message":"A text message has been sent to {phone_number}, enter the 4-digit code",
+    "change_password_message":"A text message has been sent to {phoneNumber}, enter the 4-digit code",
     "@change_password_message": {
         "description": "Message shown when changing password",
         "placeholders": {
-            "phone_number": {
+            "phoneNumber": {
                 "example": "1234567890",
                 "description": "User's phone number"
             }

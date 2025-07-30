@@ -32,7 +32,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     await SharedPreferance.init();
     setup();
 
-    await Future.delayed(Duration(seconds: 2));
+    // await Future.delayed(Duration(seconds: 2));
 
     if (!mounted) return;
 
