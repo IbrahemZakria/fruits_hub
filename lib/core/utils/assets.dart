@@ -26,9 +26,9 @@ class Assets {
   /// assets/images/logo.svg
   static const String assetsImagesLogo = "assets/images/logo.svg";
 
-  /// Assets for assetsImagesNotificationImage
-  /// assets/images/notification_image.svg
-  static const String assetsImagesNotificationImage = "assets/images/notification_image.svg";
+  /// Assets for assetsImagesNotificationIcon
+  /// assets/images/notification_icon.svg
+  static const String assetsImagesNotificationIcon = "assets/images/notification_icon.svg";
 
   /// Assets for assetsImagesOnBoardingBackground1
   /// assets/images/on_boarding_background1.svg

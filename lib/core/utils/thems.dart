@@ -24,6 +24,16 @@ class Thems {
     fontSize: 16,
     color: black,
   );
+  static TextStyle textStyle16b = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+    color: black,
+  );
+  static TextStyle textStyle16reg = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: lightgray,
+  );
   static TextStyle textStyle13SB = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 13,

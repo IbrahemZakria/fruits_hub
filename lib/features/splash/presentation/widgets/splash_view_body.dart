@@ -1,8 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub/bloco_bserver.dart';
 import 'package:fruit_hub/core/helper/function/navigate_page.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/cubits/localization/localization_cubit.dart';
+import 'package:fruit_hub/core/utils/services/get_it_services.dart';
+import 'package:fruit_hub/core/utils/services/shared_preferance.dart';
+import 'package:fruit_hub/firebase_options.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -15,11 +21,22 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
+    initializeApp();
+  }
 
-    Future.delayed(Duration(seconds: 5), () {
-      if (!mounted) return;
-      Navigator.pushReplacementNamed(context, NavigatePage.routeName());
-    });
+  Future<void> initializeApp() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+    Bloc.observer = MyBlocObserver();
+    await SharedPreferance.init();
+    setup();
+
+    await Future.delayed(Duration(seconds: 2));
+
+    if (!mounted) return;
+
+    Navigator.pushReplacementNamed(context, NavigatePage.routeName());
   }
 
   @override
