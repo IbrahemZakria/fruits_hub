@@ -7,7 +7,7 @@ class Thems {
   static const Color orange = Color(0xffF4A91F);
   static const Color black = Color(0xff0C0D0D);
   static const Color gray = Color(0xff4E5556);
-  static const Color lightgray = Color(0xff949D9E);
+  static const Color lightgray = Color(0xffF3F5F7);
 
   static TextStyle textStyle23B = TextStyle(
     fontWeight: FontWeight.bold,
@@ -17,12 +17,27 @@ class Thems {
   static TextStyle textStyle19B = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 19,
-    color: black,
+    color: Colors.white,
   );
   static TextStyle textStyle16sb = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 16,
     color: black,
+  );
+  static TextStyle textStyle13re = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: Colors.white.withValues(alpha: .8),
+  );
+  static TextStyle textStyle13b = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 13,
+    color: kprimarycolor,
+  );
+  static TextStyle textStyle19sb = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 19,
+    color: Colors.white,
   );
   static TextStyle textStyle16b = TextStyle(
     fontWeight: FontWeight.w700,
@@ -40,8 +55,13 @@ class Thems {
     color: lightgray,
   );
   static ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: Colors.white,
     primaryColor: kprimarycolor,
     fontFamily: "Cairo",
-    appBarTheme: AppBarTheme(centerTitle: true, titleTextStyle: textStyle19B),
+    appBarTheme: AppBarTheme(
+      color: Colors.white,
+      centerTitle: true,
+      titleTextStyle: textStyle19B,
+    ),
   );
 }

@@ -15,7 +15,7 @@ class _PassFormFieldState extends State<PassFormField> {
   bool isPasswordVisible = true;
   @override
   Widget build(BuildContext context) {
-    return CustomeTextFormField.custometextformfield(
+    return CustomeTextFormField(
       controller: widget.passwordController,
       validator: widget.validator != null
           ? (value) {

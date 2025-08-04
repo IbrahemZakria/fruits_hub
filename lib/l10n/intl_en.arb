@@ -123,11 +123,12 @@
   "timeout": "The request timed out. Please check your connection.",
   "@timeout": {},
   "googleSignInFailed": "Google Sign-In failed. Please try again.",
-  "@googleSignInFailed": {}
-
-
-
-
-
-
+  "@googleSignInFailed": {},
+    "searchHint": "Search for..."
+    ,"@searchHint": {},
+    
+  "bestSelling": "Best selling",
+  "@bestSelling": {},
+  "more": "More",
+  "@more": {}
 }

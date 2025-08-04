@@ -9,7 +9,7 @@ class NameFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomeTextFormField.custometextformfield(
+    return CustomeTextFormField(
       controller: nameControler,
       validator: validator != null
           ? (value) {

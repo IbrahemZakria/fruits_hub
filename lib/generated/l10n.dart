@@ -528,6 +528,31 @@ class S {
       args: [],
     );
   }
+
+  /// `Search for...`
+  String get searchHint {
+    return Intl.message(
+      'Search for...',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Best selling`
+  String get bestSelling {
+    return Intl.message(
+      'Best selling',
+      name: 'bestSelling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get more {
+    return Intl.message('More', name: 'more', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

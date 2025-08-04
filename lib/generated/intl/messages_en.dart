@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountExistsWithDifferentCredential": MessageLookupByLibrary.simpleMessage(
       "This email is already registered using a different sign-in method. Please use the original sign-in method.",
     ),
+    "bestSelling": MessageLookupByLibrary.simpleMessage("Best selling"),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(
@@ -88,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "login_with_googel": MessageLookupByLibrary.simpleMessage(
       "Login with googel",
     ),
+    "more": MessageLookupByLibrary.simpleMessage("More"),
     "name": MessageLookupByLibrary.simpleMessage("All name"),
     "new_account": MessageLookupByLibrary.simpleMessage("New account"),
     "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "required_password": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
     ),
+    "searchHint": MessageLookupByLibrary.simpleMessage("Search for..."),
     "search_markteng": MessageLookupByLibrary.simpleMessage(
       "Search and Marcting",
     ),

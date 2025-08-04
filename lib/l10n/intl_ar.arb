@@ -124,6 +124,16 @@
   "@timeout": {},
   "googleSignInFailed": "فشل تسجيل الدخول باستخدام Google. حاول مرة أخرى.",
   "@googleSignInFailed": {}
+  ,"searchHint": "ابحث عن...",
+    "@searchHint": {},
+    
+  "bestSelling": "الأكثر مبيعًا",
+  "@bestSelling": {},
+  "more": "المزيد",
+  "@more": {}
+
+
+
 
 
 

@@ -3,7 +3,7 @@ import 'package:fruit_hub/core/utils/thems.dart';
 
 // ignore: must_be_immutable
 class CustomeTextFormField extends StatelessWidget {
-  CustomeTextFormField.custometextformfield({
+  CustomeTextFormField({
     super.key,
     this.obscureText = false,
     this.hintText,

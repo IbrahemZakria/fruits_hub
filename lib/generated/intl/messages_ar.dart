@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountExistsWithDifferentCredential": MessageLookupByLibrary.simpleMessage(
       "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية.",
     ),
+    "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
@@ -91,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "login_with_googel": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطه جوجل",
     ),
+    "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
@@ -124,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "required_password": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة المرور",
     ),
+    "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن..."),
     "search_markteng": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
     "signInCancelled": MessageLookupByLibrary.simpleMessage(
       "تم إلغاء عملية تسجيل الدخول.",

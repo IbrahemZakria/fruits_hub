@@ -9,7 +9,7 @@ class EmailFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomeTextFormField.custometextformfield(
+    return CustomeTextFormField(
       controller: emailControler,
       validator: validator != null
           ? (value) {
