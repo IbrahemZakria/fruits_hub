@@ -29,7 +29,6 @@ class CustomeSearchTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
 
       decoration: BoxDecoration(
         boxShadow: [

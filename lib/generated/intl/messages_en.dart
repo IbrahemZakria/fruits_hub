@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "This email is already registered using a different sign-in method. Please use the original sign-in method.",
     ),
     "bestSelling": MessageLookupByLibrary.simpleMessage("Best selling"),
+    "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
     "change_password_message": m1,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(
@@ -75,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "have_an_account": MessageLookupByLibrary.simpleMessage(
       "Alredy have an account ? ",
     ),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
       "There is a problem with the email or password",
     ),
@@ -120,6 +122,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email",
     ),
+    "products": MessageLookupByLibrary.simpleMessage("Products"),
+    "profile": MessageLookupByLibrary.simpleMessage("My Account"),
     "required_password": MessageLookupByLibrary.simpleMessage(
       "Please enter your password",
     ),

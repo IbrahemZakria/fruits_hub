@@ -31,7 +31,7 @@ class FruitCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 10,
+            bottom: -15,
             right: 15,
             left: 15,
             child: SvgPicture.asset(

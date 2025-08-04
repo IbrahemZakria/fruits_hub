@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية.",
     ),
     "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
+    "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
@@ -76,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "have_an_account": MessageLookupByLibrary.simpleMessage(
       "تمتلك حساب بالفعل  ",
     ),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
       "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور",
     ),
@@ -123,6 +125,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
       "لو سمحت ادخل ايميل صالح لاستخدام",
     ),
+    "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "required_password": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال كلمة المرور",
     ),

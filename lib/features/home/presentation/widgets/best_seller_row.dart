@@ -7,15 +7,12 @@ class BestSellerRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(S.current.bestSelling, style: Thems.textStyle16b),
-          Text(S.current.more, style: Thems.textStyle16reg),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(S.current.bestSelling, style: Thems.textStyle16b),
+        Text(S.current.more, style: Thems.textStyle16reg),
+      ],
     );
   }
 }

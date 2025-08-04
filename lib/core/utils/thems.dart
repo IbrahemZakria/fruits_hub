@@ -54,6 +54,11 @@ class Thems {
     fontSize: 13,
     color: lightgray,
   );
+  static TextStyle textStyle11sB = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 11,
+    color: kprimarycolor,
+  );
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
     primaryColor: kprimarycolor,

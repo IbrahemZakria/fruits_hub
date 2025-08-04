@@ -130,7 +130,14 @@
   "bestSelling": "الأكثر مبيعًا",
   "@bestSelling": {},
   "more": "المزيد",
-  "@more": {}
+  "@more": {},  "home": "الرئيسية",
+  "@home": {},
+  "products": "المنتجات",
+  "@products": {},
+  "profile": "حسابي",
+  "@profile": {},
+  "cart": "سلة التسوق",
+  "@cart": {}
 
 
 

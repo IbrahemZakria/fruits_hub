@@ -130,5 +130,13 @@
   "bestSelling": "Best selling",
   "@bestSelling": {},
   "more": "More",
-  "@more": {}
+  "@more": {},
+    "home": "Home",
+  "@home": {},
+  "products": "Products",
+  "@products": {},
+  "profile": "My Account",
+  "@profile": {},
+  "cart": "Shopping Cart",
+  "@cart": {}
 }
