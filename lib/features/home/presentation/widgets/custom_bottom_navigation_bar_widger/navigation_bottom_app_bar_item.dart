@@ -13,9 +13,23 @@ class NavigationBottomAppBarItem extends StatelessWidget {
   final BottomAppBarEntity bottomAppBarEntity;
 
   @override
+  @override
   Widget build(BuildContext context) {
-    return isselected
-        ? SelectedItem(bottomAppBarEntity: bottomAppBarEntity)
-        : UnSelectedItem(bottomAppBarEntity: bottomAppBarEntity);
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 10),
+      transitionBuilder: (Widget child, Animation<double> animation) {
+        return ScaleTransition(scale: animation, child: child);
+        // أو ممكن تستخدم FadeTransition أو SlideTransition لو حابب
+      },
+      child: isselected
+          ? SelectedItem(
+              key: const ValueKey('selected'),
+              bottomAppBarEntity: bottomAppBarEntity,
+            )
+          : UnSelectedItem(
+              key: const ValueKey('unselected'),
+              bottomAppBarEntity: bottomAppBarEntity,
+            ),
+    );
   }
 }

@@ -10,13 +10,17 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class FirebaseAuthServices {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
   Future<User> createUserWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
     try {
-      final credential = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: email, password: password);
+      final credential = await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -46,7 +50,7 @@ class FirebaseAuthServices {
     required String password,
   }) async {
     try {
-      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      final credential = await _auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -75,22 +79,28 @@ class FirebaseAuthServices {
     }
   }
 
-  final FirebaseAuth _auth = FirebaseAuth.instance;
   Future<User> signInWithGoogle() async {
     try {
       if (kIsWeb) {
-        final googleProvider = GoogleAuthProvider();
-        final userCredential = await _auth.signInWithPopup(googleProvider);
+        final googleProvider =
+            GoogleAuthProvider(); //بيهيّئ تسجيل الدخول باستخدام Google.
+        final userCredential = await _auth.signInWithPopup(
+          googleProvider,
+        ); //بيفتح الصفحه بتاعه جوجل لتسجيل الدخول
         return userCredential.user!;
       } else {
         final googleSignIn = GoogleSignIn.instance;
 
         await googleSignIn.initialize();
 
-        final googleUser = await googleSignIn.authenticate();
+        final googleUser = await googleSignIn
+            .authenticate(); // تفتح UI للمستخدم يختار حساب Google.
+
+        // لحد هنا انت عملت حساب باستخدام جوجل
 
         final googleAuth = googleUser.authentication;
-
+        // لحد هنا انت عملت حساب باستخدام جوجل ومعاك البيانات تاعه المستخدم
+        // بعد كدا تعمل تسجيل الدخول باى داتا سواء firebase or backend api
         final credential = GoogleAuthProvider.credential(
           idToken: googleAuth.idToken,
         );
@@ -145,7 +155,7 @@ class FirebaseAuthServices {
       await FacebookAuth.instance
           .logOut()
           .then((value) {
-            log("lkgslfsmvdl;kzv");
+            log("login success with face book");
           })
           .catchError((error) {
             log("Facebook logout error: $error");
@@ -153,16 +163,15 @@ class FirebaseAuthServices {
       // 💥 مهم جدًا
 
       final LoginResult result = await FacebookAuth.instance.login(
-        loginBehavior:
-            LoginBehavior.nativeWithFallback, // بيخلي المستخدم يختار الحساب
-
+        loginBehavior: LoginBehavior
+            .nativeWithFallback, // لو التطبيق مش لاقي فيسبوك، هيستخدم المتصفح.
         permissions: ['email', 'public_profile'],
       );
       if (result.status == LoginStatus.success) {
         final OAuthCredential facebookAuthCredential =
             FacebookAuthProvider.credential(result.accessToken!.tokenString);
 
-        final credential = await FirebaseAuth.instance.signInWithCredential(
+        final credential = await _auth.signInWithCredential(
           facebookAuthCredential,
         );
 
