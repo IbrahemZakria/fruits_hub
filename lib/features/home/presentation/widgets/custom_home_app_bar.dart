@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
+import 'package:fruit_hub/core/utils/services/auth/get_user_data.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key});
@@ -14,9 +16,9 @@ class CustomHomeAppBar extends StatelessWidget {
         Assets.assetsImagesPersonImage,
         fit: BoxFit.fill,
       ),
-      title: Text("data"),
+      title: Text(S.current.goodMorning),
       titleTextStyle: Thems.textStyle16reg,
-      subtitle: Text("data"),
+      subtitle: Text(getUserData().name),
       subtitleTextStyle: Thems.textStyle16b,
       trailing: CircleAvatar(
         radius: 34,

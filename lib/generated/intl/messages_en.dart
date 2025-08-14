@@ -70,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "enter_id": MessageLookupByLibrary.simpleMessage("Enter your ID number"),
     "forgot_password": MessageLookupByLibrary.simpleMessage(" Forgot Password"),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("Good morning!.."),
     "googleSignInFailed": MessageLookupByLibrary.simpleMessage(
       "Google Sign-In failed. Please try again.",
     ),

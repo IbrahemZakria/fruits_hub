@@ -1,13 +1,16 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/exceptions/custom_exception.dart';
 import 'package:fruit_hub/core/failure/failure.dart';
 import 'package:fruit_hub/core/failure/firebase_server_failure.dart';
 import 'package:fruit_hub/core/utils/services/data_base/fire_store_services.dart';
 import 'package:fruit_hub/core/utils/services/end_points.dart';
-import 'package:fruit_hub/core/utils/services/firebase_auth_services.dart';
+import 'package:fruit_hub/core/utils/services/auth/firebase_auth_services.dart';
+import 'package:fruit_hub/core/utils/services/shared_preferance.dart';
 import 'package:fruit_hub/features/auth/data/models/user_model.dart';
 import 'package:fruit_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruit_hub/features/auth/domain/repositories/auth_repo.dart';
@@ -37,7 +40,8 @@ class AuthRepoImpel extends AuthRepo {
 
       //  دى اللى بتضيف اليوزر للفيرستور
       await addUserData(user: userentity);
-      return Right(UserModel.fromFirebaseUser(user));
+      await saveUserData(user: userentity);
+      return Right((UserModel.fromFirebaseUser(user)));
     } on CustomException catch (e) {
       if (user != null) {
         await deleteUser();
@@ -59,7 +63,9 @@ class AuthRepoImpel extends AuthRepo {
         email: email,
         password: password,
       );
-      return Right(UserModel.fromFirebaseUser(user));
+      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+
+      return Right(userEntity);
     } on CustomException catch (e) {
       log("message: ${e.message}");
       return left(FirebaseServerFailure(errorMessage: e.message.toString()));
@@ -71,8 +77,10 @@ class AuthRepoImpel extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthServices.signInWithGoogle();
-      await addUserData(user: UserModel.fromFirebaseUser(user));
-      return Right(UserModel.fromFirebaseUser(user));
+      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      await addUserData(user: userEntity);
+      await saveUserData(user: userEntity);
+      return Right(userEntity);
     } on CustomException catch (e) {
       if (user != null) {
         await deleteUser();
@@ -89,9 +97,10 @@ class AuthRepoImpel extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthServices.signInWithFacebook();
-      await addUserData(user: UserModel.fromFirebaseUser(user));
-
-      return Right(UserModel.fromFirebaseUser(user));
+      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      await addUserData(user: userEntity);
+      await saveUserData(user: userEntity);
+      return Right(userEntity);
     } on CustomException catch (e) {
       if (user != null) {
         await deleteUser();
@@ -104,16 +113,24 @@ class AuthRepoImpel extends AuthRepo {
   }
 
   @override
+  // ده بيحط الداتا بتاعه اليوزر ف الداتا بير بعد التسجيل
   Future addUserData({required UserEntity user}) async {
     await fireStoreServices.addData(
       path: EndPoints.addUserData,
-      data: user.toMap(),
+      data: UserModel.fromUserEntity(user).toMap(),
       documentId: user.uid,
     );
   }
 
   @override
+  // ده عشان بعد م تعمل انشاء حساب البياتات بتاعه اليوزر ببتسج بس ممكن ميتعملش تسجيلدخول ف نمسح اليوزر
   Future deleteUser() async {
     await FirebaseAuth.instance.currentUser!.delete();
+  }
+
+  @override
+  Future saveUserData({required UserEntity user}) async {
+    var jsonData = jsonEncode(UserModel.fromUserEntity(user).toMap());
+    await SharedPreferance.setData(key: Constant.userData, value: jsonData);
   }
 }

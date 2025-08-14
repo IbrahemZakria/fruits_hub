@@ -573,6 +573,16 @@ class S {
   String get cart {
     return Intl.message('Shopping Cart', name: 'cart', desc: '', args: []);
   }
+
+  /// `Good morning!..`
+  String get goodMorning {
+    return Intl.message(
+      'Good morning!..',
+      name: 'goodMorning',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

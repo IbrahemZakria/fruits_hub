@@ -71,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "يوجد حساب بالفعل مرتبط بهذا البريد الإلكتروني.",
     ),
     "forgot_password": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+    "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير!.."),
     "googleSignInFailed": MessageLookupByLibrary.simpleMessage(
       "فشل تسجيل الدخول باستخدام Google. حاول مرة أخرى.",
     ),

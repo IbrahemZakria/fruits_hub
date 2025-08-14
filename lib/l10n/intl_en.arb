@@ -138,5 +138,8 @@
   "profile": "My Account",
   "@profile": {},
   "cart": "Shopping Cart",
-  "@cart": {}
+  "@cart": {},
+    "goodMorning": "Good morning!..",
+    "@goodMorning": {}
+
 }

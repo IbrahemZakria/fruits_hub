@@ -19,7 +19,6 @@ class NavigationBottomAppBarItem extends StatelessWidget {
       duration: const Duration(milliseconds: 10),
       transitionBuilder: (Widget child, Animation<double> animation) {
         return ScaleTransition(scale: animation, child: child);
-        // أو ممكن تستخدم FadeTransition أو SlideTransition لو حابب
       },
       child: isselected
           ? SelectedItem(

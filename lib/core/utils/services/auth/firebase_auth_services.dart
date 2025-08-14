@@ -10,14 +10,14 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class FirebaseAuthServices {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  static final FirebaseAuth auth = FirebaseAuth.instance;
 
   Future<User> createUserWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
     try {
-      final credential = await _auth.createUserWithEmailAndPassword(
+      final credential = await auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -50,7 +50,7 @@ class FirebaseAuthServices {
     required String password,
   }) async {
     try {
-      final credential = await _auth.signInWithEmailAndPassword(
+      final credential = await auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -84,7 +84,7 @@ class FirebaseAuthServices {
       if (kIsWeb) {
         final googleProvider =
             GoogleAuthProvider(); //بيهيّئ تسجيل الدخول باستخدام Google.
-        final userCredential = await _auth.signInWithPopup(
+        final userCredential = await auth.signInWithPopup(
           googleProvider,
         ); //بيفتح الصفحه بتاعه جوجل لتسجيل الدخول
         return userCredential.user!;
@@ -105,7 +105,7 @@ class FirebaseAuthServices {
           idToken: googleAuth.idToken,
         );
 
-        final userCredential = await _auth.signInWithCredential(credential);
+        final userCredential = await auth.signInWithCredential(credential);
         return userCredential.user!;
       }
     }
@@ -171,7 +171,7 @@ class FirebaseAuthServices {
         final OAuthCredential facebookAuthCredential =
             FacebookAuthProvider.credential(result.accessToken!.tokenString);
 
-        final credential = await _auth.signInWithCredential(
+        final credential = await auth.signInWithCredential(
           facebookAuthCredential,
         );
 

@@ -137,7 +137,10 @@
   "profile": "حسابي",
   "@profile": {},
   "cart": "سلة التسوق",
-  "@cart": {}
+  "@cart": {},
+    "goodMorning": "صباح الخير!..",
+    "@goodMorning": {}
+
 
 
 

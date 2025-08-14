@@ -8,6 +8,7 @@ class Thems {
   static const Color black = Color(0xff0C0D0D);
   static const Color gray = Color(0xff4E5556);
   static const Color lightgray = Color(0xffF3F5F7);
+  static const Color textlightgray = Color.fromARGB(255, 188, 191, 193);
 
   static TextStyle textStyle23B = TextStyle(
     fontWeight: FontWeight.bold,
@@ -47,12 +48,12 @@ class Thems {
   static TextStyle textStyle16reg = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 16,
-    color: lightgray,
+    color: textlightgray,
   );
   static TextStyle textStyle13SB = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 13,
-    color: lightgray,
+    color: textlightgray,
   );
   static TextStyle textStyle11sB = TextStyle(
     fontWeight: FontWeight.w600,
