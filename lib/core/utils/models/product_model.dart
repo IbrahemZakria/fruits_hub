@@ -1,7 +1,7 @@
 import 'package:fruit_hub/core/utils/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/models/review_model.dart';
 
-class ProductModel {
+class ProductModel extends ProductEntity {
   final String name;
   final String price;
   String? imageUrl;
@@ -29,7 +29,20 @@ class ProductModel {
     this.imageUrl,
     required this.description,
     required this.productCode,
-  });
+  }) : super(
+         reviewEntity: reviewModel,
+         numberOfCalories: numberOfCalories,
+         numberOfMonthExpiration: numberOfMonthExpiration,
+         isOrganic: isOrganic,
+         isFeatured: isFeatured,
+         name: name,
+         price: price,
+         imageUrl: imageUrl,
+         description: description,
+         productCode: productCode,
+         raitingCount: raitingCount,
+         averageCount: averageCount,
+       );
 
   Map<String, dynamic> toJson() {
     return {

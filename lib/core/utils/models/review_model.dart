@@ -1,6 +1,6 @@
 import 'package:fruit_hub/core/utils/entities/review_entity.dart';
 
-class ReviewModel {
+class ReviewModel extends ReviewEntity {
   final String image;
   final String name;
   final String date;
@@ -13,7 +13,13 @@ class ReviewModel {
     required this.date,
     required this.reviewDescription,
     required this.ratting,
-  });
+  }) : super(
+         image: image,
+         name: name,
+         date: date,
+         reviewDescription: reviewDescription,
+         ratting: ratting,
+       );
 
   factory ReviewModel.fromJson(Map<String, dynamic> json) {
     return ReviewModel(
