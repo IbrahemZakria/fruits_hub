@@ -10,6 +10,7 @@ class SelectedItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // width: MediaQuery.of(context).size.width * .2,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Thems.lightgray,

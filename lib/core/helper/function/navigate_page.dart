@@ -2,7 +2,7 @@ import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/utils/services/auth/firebase_auth_services.dart';
 import 'package:fruit_hub/core/utils/services/shared_preferance.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/login_view.dart';
-import 'package:fruit_hub/features/home/presentation/pages/home_page.dart';
+import 'package:fruit_hub/features/home/presentation/pages/main_home_page.dart';
 import 'package:fruit_hub/features/onpoarding/presentation/pages/on_boarding_view.dart';
 
 class NavigatePage {
@@ -29,7 +29,7 @@ class NavigatePage {
   static String routeName() {
     if (isOnBoarding()) {
       if (isLogin()) {
-        return HomePage.routeName;
+        return MainHomePage.routeName;
       } else {
         return LoginView.routeName;
       }

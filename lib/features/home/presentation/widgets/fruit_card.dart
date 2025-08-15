@@ -31,12 +31,12 @@ class FruitCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: -15,
+            top: 0,
             right: 15,
             left: 15,
             child: SvgPicture.asset(
               Assets.assetsImagesOnBoardingImage1,
-              fit: BoxFit.contain,
+              width: MediaQuery.of(context).size.width * .5,
             ),
           ),
           SizedBox(height: 24),

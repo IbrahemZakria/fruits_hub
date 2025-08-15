@@ -28,7 +28,11 @@ class CustomPageViewItem extends StatelessWidget {
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                SvgPicture.asset(backgroundImage, fit: BoxFit.fill),
+                Positioned(
+                  right: 0,
+                  left: 0,
+                  child: SvgPicture.asset(backgroundImage, fit: BoxFit.fill),
+                ),
                 Positioned(
                   right: 0,
                   left: 0,

@@ -13,10 +13,9 @@ class NavigationBottomAppBarItem extends StatelessWidget {
   final BottomAppBarEntity bottomAppBarEntity;
 
   @override
-  @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 10),
+      duration: const Duration(milliseconds: 300),
       transitionBuilder: (Widget child, Animation<double> animation) {
         return ScaleTransition(scale: animation, child: child);
       },

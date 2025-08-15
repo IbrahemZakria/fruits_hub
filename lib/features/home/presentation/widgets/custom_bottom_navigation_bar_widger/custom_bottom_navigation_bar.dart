@@ -3,7 +3,8 @@ import 'package:fruit_hub/features/home/domain/entities/bottom_app_bar_entity.da
 import 'package:fruit_hub/features/home/presentation/widgets/custom_bottom_navigation_bar_widger/navigation_bottom_app_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  const CustomBottomNavigationBar({super.key});
+  const CustomBottomNavigationBar({super.key, required this.selectedItem});
+  final ValueChanged<int> selectedItem;
 
   @override
   State<CustomBottomNavigationBar> createState() =>
@@ -12,6 +13,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int selectedindex = 0;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -30,6 +32,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           ),
         ],
       ),
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: BottomAppBarEntity.getBottomAppBarItems.asMap().entries.map((
@@ -38,15 +41,19 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           int index = entry.key;
           var item = entry.value;
 
-          return GestureDetector(
-            onTap: () {
-              setState(() {
-                selectedindex = index;
-              });
-            },
-            child: NavigationBottomAppBarItem(
-              isselected: selectedindex == index ? true : false,
-              bottomAppBarEntity: item,
+          return Expanded(
+            flex: index == selectedindex ? 3 : 2,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedindex = index;
+                });
+                widget.selectedItem(index);
+              },
+              child: NavigationBottomAppBarItem(
+                isselected: selectedindex == index ? true : false,
+                bottomAppBarEntity: item,
+              ),
             ),
           );
         }).toList(),

@@ -10,26 +10,39 @@ class CustomHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: EdgeInsets.zero,
-      leading: SvgPicture.asset(
-        Assets.assetsImagesPersonImage,
-        fit: BoxFit.fill,
-      ),
-      title: Text(S.current.goodMorning),
-      titleTextStyle: Thems.textStyle16reg,
-      subtitle: Text(getUserData().name),
-      subtitleTextStyle: Thems.textStyle16b,
-      trailing: CircleAvatar(
-        radius: 34,
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          SvgPicture.asset(Assets.assetsImagesPersonImage, fit: BoxFit.fill),
+          SizedBox(width: 11),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(S.current.goodMorning, style: Thems.textStyle16reg),
+                Text(getUserData().name, style: Thems.textStyle16b),
+              ],
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: CircleAvatar(
+              radius: 25,
 
-        backgroundColor: Color(0xffEEF8ED),
-        child: SvgPicture.asset(
-          width: 34,
+              backgroundColor: Color(0xffEEF8ED),
+              child: Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: SvgPicture.asset(
+                  width: 34,
 
-          Assets.assetsImagesNotificationIcon,
-          fit: BoxFit.fill,
-        ),
+                  Assets.assetsImagesNotificationIcon,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

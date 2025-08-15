@@ -1,47 +1,47 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
+import 'package:fruit_hub/core/utils/services/auth/get_user_data.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
+import 'package:fruit_hub/generated/l10n.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        IconButton(
-          padding: EdgeInsets.all(0),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Container(
-            padding: EdgeInsets.all(size.height * .02), // سمك الـ border
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: Thems.lightgray, // لون الـ border
-                width: 1, // سمكه
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          Expanded(
+            child: Align(
+              alignment: Alignment.center,
+              child: Text(
+                S.current.goodMorning,
+                style: Thems.textStyle19B.copyWith(color: Colors.black),
               ),
             ),
-            child: SvgPicture.asset(Assets.assetsImagesArrowBack),
           ),
-        ),
-        Text("data", style: Thems.textStyle19B.copyWith(color: Colors.black)),
-        CircleAvatar(
-          radius: size.height * .02,
+          Align(
+            alignment: Alignment.centerLeft,
+            child: CircleAvatar(
+              radius: 25,
 
-          backgroundColor: Color(0xffEEF8ED),
-          child: SvgPicture.asset(
-            height: size.height * .025,
+              backgroundColor: Color(0xffEEF8ED),
+              child: Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: SvgPicture.asset(
+                  width: 34,
 
-            Assets.assetsImagesNotificationIcon,
-            fit: BoxFit.fill,
+                  Assets.assetsImagesNotificationIcon,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

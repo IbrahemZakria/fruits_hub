@@ -8,6 +8,9 @@ class UnSelectedItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(bottomAppBarEntity.unSelectedImage);
+    return Container(
+      color: Colors.transparent,
+      child: SvgPicture.asset(bottomAppBarEntity.unSelectedImage),
+    );
   }
 }
