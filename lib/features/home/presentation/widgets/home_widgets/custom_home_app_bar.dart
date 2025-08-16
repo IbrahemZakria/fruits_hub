@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
-import 'package:fruit_hub/core/utils/services/auth/get_user_data.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
@@ -21,7 +20,7 @@ class CustomHomeAppBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(S.current.goodMorning, style: Thems.textStyle16reg),
-                Text(getUserData().name, style: Thems.textStyle16b),
+                // Text(getUserData().name, style: Thems.textStyle16b),
               ],
             ),
           ),

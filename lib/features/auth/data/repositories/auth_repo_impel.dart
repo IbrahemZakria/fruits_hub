@@ -7,7 +7,7 @@ import 'package:fruit_hub/constant.dart';
 import 'package:fruit_hub/core/exceptions/custom_exception.dart';
 import 'package:fruit_hub/core/failure/failure.dart';
 import 'package:fruit_hub/core/failure/firebase_server_failure.dart';
-import 'package:fruit_hub/core/utils/services/data_base/fire_store_services.dart';
+import 'package:fruit_hub/core/utils/services/data_base/data_base_services.dart';
 import 'package:fruit_hub/core/utils/services/end_points.dart';
 import 'package:fruit_hub/core/utils/services/auth/firebase_auth_services.dart';
 import 'package:fruit_hub/core/utils/services/shared_preferance.dart';
@@ -17,8 +17,8 @@ import 'package:fruit_hub/features/auth/domain/repositories/auth_repo.dart';
 
 class AuthRepoImpel extends AuthRepo {
   final FirebaseAuthServices firebaseAuthServices;
-  final FireStoreServices fireStoreServices;
-  AuthRepoImpel(this.firebaseAuthServices, this.fireStoreServices);
+  final DataBaseServices dataBaseServices;
+  AuthRepoImpel(this.firebaseAuthServices, this.dataBaseServices);
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
     required String email,
@@ -40,8 +40,7 @@ class AuthRepoImpel extends AuthRepo {
 
       //  دى اللى بتضيف اليوزر للفيرستور
       await addUserData(user: userentity);
-      await saveUserData(user: userentity);
-      return Right((UserModel.fromFirebaseUser(user)));
+      return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       if (user != null) {
         await deleteUser();
@@ -63,9 +62,7 @@ class AuthRepoImpel extends AuthRepo {
         email: email,
         password: password,
       );
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
-
-      return Right(userEntity);
+      return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       log("message: ${e.message}");
       return left(FirebaseServerFailure(errorMessage: e.message.toString()));
@@ -77,10 +74,8 @@ class AuthRepoImpel extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthServices.signInWithGoogle();
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
-      await saveUserData(user: userEntity);
-      return Right(userEntity);
+      await addUserData(user: UserModel.fromFirebaseUser(user));
+      return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       if (user != null) {
         await deleteUser();
@@ -97,10 +92,9 @@ class AuthRepoImpel extends AuthRepo {
     User? user;
     try {
       user = await firebaseAuthServices.signInWithFacebook();
-      UserEntity userEntity = UserModel.fromFirebaseUser(user);
-      await addUserData(user: userEntity);
-      await saveUserData(user: userEntity);
-      return Right(userEntity);
+      await addUserData(user: UserModel.fromFirebaseUser(user));
+
+      return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       if (user != null) {
         await deleteUser();
@@ -115,7 +109,7 @@ class AuthRepoImpel extends AuthRepo {
   @override
   // ده بيحط الداتا بتاعه اليوزر ف الداتا بير بعد التسجيل
   Future addUserData({required UserEntity user}) async {
-    await fireStoreServices.addData(
+    await dataBaseServices.addData(
       path: EndPoints.addUserData,
       data: UserModel.fromUserEntity(user).toMap(),
       documentId: user.uid,

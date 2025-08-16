@@ -1,16 +1,18 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
+import 'package:fruit_hub/core/utils/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
-import 'package:fruit_hub/features/home/domain/entities/fruit_entity.dart';
 
 class FruitCard extends StatelessWidget {
-  final FruitEntity fruit;
+  final ProductEntity fruit;
 
   const FruitCard({super.key, required this.fruit});
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(
         color: Thems.lightgray,
@@ -31,12 +33,17 @@ class FruitCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 0,
-            right: 15,
-            left: 15,
-            child: SvgPicture.asset(
-              Assets.assetsImagesOnBoardingImage1,
-              width: MediaQuery.of(context).size.width * .5,
+            bottom: size.height * .085,
+            top: size.height * .03,
+            right: size.height * .035,
+            left: size.height * .035,
+            child: CachedNetworkImage(
+              fit: BoxFit.cover,
+              imageUrl: fruit.imageUrl!,
+              placeholder: (context, url) => Center(
+                child: CircularProgressIndicator(color: Thems.kprimarycolor),
+              ),
+              errorWidget: (context, url, error) => Icon(Icons.error),
             ),
           ),
           SizedBox(height: 24),

@@ -1,9 +1,6 @@
 class UserEntity {
-  final String name, email, uid;
+  final String email, uid;
+  String name;
 
-  const UserEntity({
-    required this.name,
-    required this.email,
-    required this.uid,
-  });
+  UserEntity({this.name = "", required this.email, required this.uid});
 }

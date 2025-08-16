@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
-import 'package:fruit_hub/core/utils/services/auth/get_user_data.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({super.key, required this.titel});
+  final String titel;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
             child: Align(
               alignment: Alignment.center,
               child: Text(
-                S.current.goodMorning,
+                titel,
                 style: Thems.textStyle19B.copyWith(color: Colors.black),
               ),
             ),
