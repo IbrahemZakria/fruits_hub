@@ -61,7 +61,7 @@ class Thems {
     color: kprimarycolor,
   );
   static ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: Color.fromRGBO(255, 255, 255, 1),
     primaryColor: kprimarycolor,
     fontFamily: "Cairo",
     appBarTheme: AppBarTheme(

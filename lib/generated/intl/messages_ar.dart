@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(time) => "إعادة إرسال الرمز خلال ${time}";
 
-  static String m1(phoneNumber) =>
+  static String m1(count) =>
+      "${Intl.plural(count, zero: 'سلة التسوق فارغة', one: 'لديك منتج واحد في سلة التسوق', two: 'لديك منتجان في سلة التسوق', few: 'لديك ${count} منتجات في سلة التسوق', other: 'لديك ${count} منتج في سلة التسوق')}";
+
+  static String m2(phoneNumber) =>
       "تم إرسال رسالة نصية إلى ${phoneNumber}، أدخل الرمز المكون من 4 أرقام";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -48,10 +51,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
     "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+    "cartItemsCount": m1,
     "change_password": MessageLookupByLibrary.simpleMessage(
       "تغيير كلمة المرور",
     ),
-    "change_password_message": m1,
+    "change_password_message": m2,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(
       "من خلال إنشاء حساب ، فإنك توافق على",
     ),

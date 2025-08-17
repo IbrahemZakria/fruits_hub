@@ -29,7 +29,7 @@ class _FruitGridViewState extends State<FruitGridView> {
             ),
             itemBuilder: (context, index) {
               final fruit = state.products[index];
-              return FruitCard(fruit: fruit);
+              return FruitCard(product: fruit);
             },
           );
         } else if (state is ProductsFailureState) {
@@ -46,7 +46,7 @@ class _FruitGridViewState extends State<FruitGridView> {
                 childAspectRatio: 3 / 3.5,
               ),
               itemBuilder: (context, index) {
-                return FruitCard(fruit: dummyProducts);
+                return FruitCard(product: dummyProduct);
               },
             ),
           );

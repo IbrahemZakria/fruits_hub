@@ -139,7 +139,14 @@
   "cart": "سلة التسوق",
   "@cart": {},
     "goodMorning": "صباح الخير!..",
-    "@goodMorning": {}
+    "@goodMorning": {},
+  "cartItemsCount": "{count, plural, =0{سلة التسوق فارغة} =1{لديك منتج واحد في سلة التسوق} =2{لديك منتجان في سلة التسوق} few{لديك {count} منتجات في سلة التسوق} other{لديك {count} منتج في سلة التسوق}}"
+,      "@cartItemsCount": {
+            "placeholders": {
+                  "count": {}
+            }
+      }
+
 
 
 

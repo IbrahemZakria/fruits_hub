@@ -2,20 +2,25 @@ import 'package:fruit_hub/core/utils/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/models/review_model.dart';
 
 class ProductModel extends ProductEntity {
+  int? amount;
+  String? productUnit;
   final String name;
-  final String price;
+  final double price;
   String? imageUrl;
   final String description;
   final String productCode;
   final int numberOfMonthExpiration;
   final bool isOrganic;
   final bool isFeatured;
-  List<ReviewModel> reviewModel;
-
   int numberOfCalories;
-  final num raitingCount;
-  final num averageCount;
+  num? raitingCount;
+  num? averageCount;
+  List<ReviewModel> reviewModel;
+  num? sellsCount;
   ProductModel({
+    this.productUnit,
+    this.amount,
+    required this.sellsCount,
     required this.reviewModel,
     required this.numberOfCalories,
     required this.numberOfMonthExpiration,
@@ -30,6 +35,9 @@ class ProductModel extends ProductEntity {
     required this.description,
     required this.productCode,
   }) : super(
+         sellsCount: sellsCount,
+         amount: amount,
+         productUnit: productUnit,
          reviewEntity: reviewModel,
          numberOfCalories: numberOfCalories,
          numberOfMonthExpiration: numberOfMonthExpiration,
@@ -57,6 +65,10 @@ class ProductModel extends ProductEntity {
       'raitingCount': raitingCount,
       'averageCount': averageCount,
       'isFeatured': isFeatured,
+      'sellsCount': sellsCount,
+      'amount': amount,
+      'productUnit': productUnit,
+
       'reviews': reviewModel.map((e) => e.toJson()).toList(),
     };
   }
@@ -67,7 +79,7 @@ class ProductModel extends ProductEntity {
           .map((item) => ReviewModel.fromJson(item as Map<String, dynamic>))
           .toList(),
       name: json['name'] ?? '',
-      price: json['price']?.toString() ?? '0',
+      price: json['price'] ?? 0,
       imageUrl: json['imageUrl'],
       description: json['description'] ?? '',
       productCode: json['productCode']?.toString() ?? '',
@@ -77,6 +89,9 @@ class ProductModel extends ProductEntity {
       raitingCount: json['raitingCount'] ?? 0,
       averageCount: json['averageCount'] ?? 0,
       isFeatured: json["isFeatured"],
+      sellsCount: json["sellsCount"],
+      amount: json["amount"],
+      productUnit: json["productUnit"],
     );
   }
   factory ProductModel.fromEntity(ProductEntity entity) {
@@ -95,6 +110,9 @@ class ProductModel extends ProductEntity {
       isOrganic: entity.isOrganic,
       raitingCount: entity.raitingCount ?? 0,
       averageCount: entity.averageCount ?? 0,
+      sellsCount: entity.sellsCount ?? 0,
+      productUnit: entity.productUnit ?? "كجم",
+      amount: entity.amount ?? 1,
     );
   }
 }

@@ -1,14 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
+import 'package:fruit_hub/features/home/presentation/cubit/cart_cubit/cart_cubit.dart';
 
 class FruitCard extends StatelessWidget {
-  final ProductEntity fruit;
+  final ProductEntity product;
 
-  const FruitCard({super.key, required this.fruit});
+  const FruitCard({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class FruitCard extends StatelessWidget {
             left: size.height * .035,
             child: CachedNetworkImage(
               fit: BoxFit.cover,
-              imageUrl: fruit.imageUrl!,
+              imageUrl: product.imageUrl!,
               placeholder: (context, url) => Center(
                 child: CircularProgressIndicator(color: Thems.kprimarycolor),
               ),
@@ -59,7 +61,7 @@ class FruitCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        fruit.name,
+                        product.name,
                         style: Thems.textStyle13SB.copyWith(
                           color: Colors.black,
                         ),
@@ -73,10 +75,10 @@ class FruitCard extends StatelessWidget {
                           ),
 
                           children: [
-                            TextSpan(text: "${fruit.price}"),
-                            TextSpan(text: "جنيه"),
+                            TextSpan(text: product.price.toString()),
+                            TextSpan(text: "/جنيه"),
                             TextSpan(
-                              text: "  / الكيلو",
+                              text: product.productUnit,
                               style: Thems.textStyle13b.copyWith(
                                 color: Thems.orange.withValues(alpha: .4),
                               ),
@@ -91,7 +93,9 @@ class FruitCard extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    context.read<CartCubit>().addProduct(product);
+                  },
                   child: CircleAvatar(
                     backgroundColor: Thems.kprimarycolor,
                     radius: 18,

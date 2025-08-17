@@ -28,6 +28,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+
+  intl_utils: ^2.8.7
+
+
   bloc: ^9.0.0
   cached_network_image: ^3.4.1
   cloud_firestore: ^5.6.12
@@ -69,7 +73,9 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
+
 flutter:
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -131,3 +137,9 @@ flutter_native_splash:
   android: true
   ios: true
   android_disable_fullscreen: true
+
+  flutter_intl:
+  enabled: true
+  arb_dir: lib/l10n
+  output_dir: lib/generated
+

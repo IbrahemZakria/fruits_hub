@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
-import 'package:fruit_hub/generated/l10n.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.titel});

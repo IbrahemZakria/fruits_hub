@@ -583,6 +583,19 @@ class S {
       args: [],
     );
   }
+
+  /// `{count, plural, =0{Your cart is empty} =1{You have 1 item in your shopping cart} other{You have {count} items in your shopping cart}}`
+  String cartItemsCount(num count) {
+    return Intl.plural(
+      count,
+      zero: 'Your cart is empty',
+      one: 'You have 1 item in your shopping cart',
+      other: 'You have $count items in your shopping cart',
+      name: 'cartItemsCount',
+      desc: '',
+      args: [count],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

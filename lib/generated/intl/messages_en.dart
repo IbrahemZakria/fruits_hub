@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(time) => "Resend  code within ${time}";
 
-  static String m1(phoneNumber) =>
+  static String m1(count) =>
+      "${Intl.plural(count, zero: 'Your cart is empty', one: 'You have 1 item in your shopping cart', other: 'You have ${count} items in your shopping cart')}";
+
+  static String m2(phoneNumber) =>
       "A text message has been sent to ${phoneNumber}, enter the 4-digit code";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -48,8 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "bestSelling": MessageLookupByLibrary.simpleMessage("Best selling"),
     "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
+    "cartItemsCount": m1,
     "change_password": MessageLookupByLibrary.simpleMessage("Change Password"),
-    "change_password_message": m1,
+    "change_password_message": m2,
     "checkbox_content": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to our",
     ),
