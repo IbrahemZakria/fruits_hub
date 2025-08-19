@@ -28,135 +28,116 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m2(phoneNumber) =>
       "تم إرسال رسالة نصية إلى ${phoneNumber}، أدخل الرمز المكون من 4 أرقام";
 
+  static String m3(amount) => "الدفع ${amount} جنيه";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "Email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
-    "Please_enter_your_email": MessageLookupByLibrary.simpleMessage(
-      "لو سمحت ادخل الايميل الخاص بك",
-    ),
-    "Please_enter_your_name": MessageLookupByLibrary.simpleMessage(
-      "لو سمحت ادخل اسمك ",
-    ),
-    "Resend_code_time": m0,
-    "Terms_and_Conditions": MessageLookupByLibrary.simpleMessage(
-      " الشروط والأحكام الخاصة بنا",
-    ),
-    "Welcome_to": MessageLookupByLibrary.simpleMessage("مرحبا بك ف "),
-    "about_us": MessageLookupByLibrary.simpleMessage("معلومات عنا"),
-    "acceptTerms": MessageLookupByLibrary.simpleMessage(
-      "الرجاء الموافقه على الشروط والاحكام",
-    ),
-    "accountExistsWithDifferentCredential": MessageLookupByLibrary.simpleMessage(
-      "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية.",
-    ),
-    "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
-    "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
-    "cartItemsCount": m1,
-    "change_password": MessageLookupByLibrary.simpleMessage(
-      "تغيير كلمة المرور",
-    ),
-    "change_password_message": m2,
-    "checkbox_content": MessageLookupByLibrary.simpleMessage(
-      "من خلال إنشاء حساب ، فإنك توافق على",
-    ),
-    "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
-    "confirm_new_password": MessageLookupByLibrary.simpleMessage(
-      "تأكيد كلمة المرور الجديدة",
-    ),
-    "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
-    "create_account": MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
-    "did_you_forgot_password": MessageLookupByLibrary.simpleMessage(
-      " هل نسيت كلمة المرور؟",
-    ),
-    "dont_have_an_account": MessageLookupByLibrary.simpleMessage(
-      "لا تمتلك حساب ؟ ",
-    ),
-    "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
-      "يوجد حساب بالفعل مرتبط بهذا البريد الإلكتروني.",
-    ),
-    "forgot_password": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
-    "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير!.."),
-    "googleSignInFailed": MessageLookupByLibrary.simpleMessage(
-      "فشل تسجيل الدخول باستخدام Google. حاول مرة أخرى.",
-    ),
-    "have_an_account": MessageLookupByLibrary.simpleMessage(
-      "تمتلك حساب بالفعل  ",
-    ),
-    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
-    "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
-      "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور",
-    ),
-    "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
-    "loginSuccess": MessageLookupByLibrary.simpleMessage(
-      "تم تسجيل الدخول بنجاح",
-    ),
-    "login_with_appel": MessageLookupByLibrary.simpleMessage(
-      "تسجيل الدخول بواسطه أبل",
-    ),
-    "login_with_facebook": MessageLookupByLibrary.simpleMessage(
-      "تسجيل الدخول بواسطه فيسبوك",
-    ),
-    "login_with_googel": MessageLookupByLibrary.simpleMessage(
-      "تسجيل الدخول بواسطه جوجل",
-    ),
-    "more": MessageLookupByLibrary.simpleMessage("المزيد"),
-    "name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
-    "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
-    "new_password": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
-    "noInternet": MessageLookupByLibrary.simpleMessage(
-      "يوجد مشكلة في الاتصال بالإنترنت",
-    ),
-    "onBoarSubTitle1": MessageLookupByLibrary.simpleMessage(
-      "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
-    ),
-    "onBoarSubTitle2": MessageLookupByLibrary.simpleMessage(
-      "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
-    ),
-    "or": MessageLookupByLibrary.simpleMessage("أو"),
-    "otp": MessageLookupByLibrary.simpleMessage(" التحقق الثنائى"),
-    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-    "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
-      "تم تغيير كلمة المرور بنجاح",
-    ),
-    "password_mismatch": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور غير متطابقة",
-    ),
-    "passwords_dose_not_match": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور غير متطابقة",
-    ),
-    "platformError": MessageLookupByLibrary.simpleMessage(
-      "حدث خطأ في النظام. يرجى المحاولة مرة أخرى.",
-    ),
-    "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
-      "لو سمحت ادخل ايميل صالح لاستخدام",
-    ),
-    "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
-    "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
-    "required_password": MessageLookupByLibrary.simpleMessage(
-      "يرجى إدخال كلمة المرور",
-    ),
-    "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن..."),
-    "search_markteng": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
-    "signInCancelled": MessageLookupByLibrary.simpleMessage(
-      "تم إلغاء عملية تسجيل الدخول.",
-    ),
-    "signUpSuccess": MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
-    "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
-    "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الأن "),
-    "timeout": MessageLookupByLibrary.simpleMessage(
-      "انتهت مهلة الطلب. تأكد من اتصالك بالإنترنت.",
-    ),
-    "unknownError": MessageLookupByLibrary.simpleMessage(
-      "حدث خطأ غير معروف: الرجاء المحاولة مرة أخرى لاحقاً",
-    ),
-    "weakPassword": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور التي تم إدخالها ضعيفة جداً.",
-    ),
-    "wrong_data": MessageLookupByLibrary.simpleMessage(
-      "لو سمحت ادخل قيمه صحيحه",
-    ),
-    "wrong_password": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور غير صحيحة",
-    ),
-  };
+        "Email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "Please_enter_your_email": MessageLookupByLibrary.simpleMessage(
+            "لو سمحت ادخل الايميل الخاص بك"),
+        "Please_enter_your_name":
+            MessageLookupByLibrary.simpleMessage("لو سمحت ادخل اسمك "),
+        "Resend_code_time": m0,
+        "Terms_and_Conditions":
+            MessageLookupByLibrary.simpleMessage(" الشروط والأحكام الخاصة بنا"),
+        "Welcome_to": MessageLookupByLibrary.simpleMessage("مرحبا بك ف "),
+        "about_us": MessageLookupByLibrary.simpleMessage("معلومات عنا"),
+        "acceptTerms": MessageLookupByLibrary.simpleMessage(
+            "الرجاء الموافقه على الشروط والاحكام"),
+        "accountExistsWithDifferentCredential":
+            MessageLookupByLibrary.simpleMessage(
+                "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية."),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
+        "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+        "cartItemsCount": m1,
+        "change_password":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "change_password_message": m2,
+        "checkbox_content": MessageLookupByLibrary.simpleMessage(
+            "من خلال إنشاء حساب ، فإنك توافق على"),
+        "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+        "confirm_continue":
+            MessageLookupByLibrary.simpleMessage("تأكيد واستمر"),
+        "confirm_new_password":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+        "create_account":
+            MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
+        "did_you_forgot_password":
+            MessageLookupByLibrary.simpleMessage(" هل نسيت كلمة المرور؟"),
+        "dont_have_an_account":
+            MessageLookupByLibrary.simpleMessage("لا تمتلك حساب ؟ "),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "يوجد حساب بالفعل مرتبط بهذا البريد الإلكتروني."),
+        "forgot_password":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "goodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير!.."),
+        "googleSignInFailed": MessageLookupByLibrary.simpleMessage(
+            "فشل تسجيل الدخول باستخدام Google. حاول مرة أخرى."),
+        "have_an_account":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل  "),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
+            "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "loginSuccess":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "login_with_appel":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول بواسطه أبل"),
+        "login_with_facebook":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول بواسطه فيسبوك"),
+        "login_with_googel":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول بواسطه جوجل"),
+        "more": MessageLookupByLibrary.simpleMessage("المزيد"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
+        "new_account": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "new_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "noInternet": MessageLookupByLibrary.simpleMessage(
+            "يوجد مشكلة في الاتصال بالإنترنت"),
+        "onBoarSubTitle1": MessageLookupByLibrary.simpleMessage(
+            "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
+        "onBoarSubTitle2": MessageLookupByLibrary.simpleMessage(
+            "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "otp": MessageLookupByLibrary.simpleMessage(" التحقق الثنائى"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_changed_successfully":
+            MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور بنجاح"),
+        "password_mismatch":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير متطابقة"),
+        "passwords_dose_not_match":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير متطابقة"),
+        "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+        "paymentAmount": m3,
+        "platformError": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ في النظام. يرجى المحاولة مرة أخرى."),
+        "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
+            "لو سمحت ادخل ايميل صالح لاستخدام"),
+        "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+        "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
+        "required_password":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال كلمة المرور"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن..."),
+        "search_markteng": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
+        "signInCancelled": MessageLookupByLibrary.simpleMessage(
+            "تم إلغاء عملية تسجيل الدخول."),
+        "signUpSuccess":
+            MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
+        "skip": MessageLookupByLibrary.simpleMessage("تخطى"),
+        "start_now": MessageLookupByLibrary.simpleMessage("ابدأ الأن "),
+        "timeout": MessageLookupByLibrary.simpleMessage(
+            "انتهت مهلة الطلب. تأكد من اتصالك بالإنترنت."),
+        "unknownError": MessageLookupByLibrary.simpleMessage(
+            "حدث خطأ غير معروف: الرجاء المحاولة مرة أخرى لاحقاً"),
+        "weakPassword": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور التي تم إدخالها ضعيفة جداً."),
+        "wrong_data":
+            MessageLookupByLibrary.simpleMessage("لو سمحت ادخل قيمه صحيحه"),
+        "wrong_password":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صحيحة")
+      };
 }

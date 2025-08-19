@@ -145,19 +145,34 @@
             "placeholders": {
                   "count": {}
             }
+
+
+              },
+  "paymentAmount": "الدفع {amount} جنيه",
+  "@paymentAmount": {
+    "description": "رسالة الدفع مع المبلغ المتغير",
+    "placeholders": {
+      "amount": {
+        "type": "double",
+        "example": "120"
       }
+    }
+  } , "payment": "الدفع",
+    "@payment": {},
+  "address": "العنوان",
+    "@address": {},
+  "shipping": "الشحن",
+    "@shipping": {},
+
+"confirm_continue": "تأكيد واستمر",
+"@confirm_continue": {},
+
+"next": "التالي",
+"@next": {}
 
 
-
-
-
-
-
-
-
-    
-
-
-
-    
 }
+
+
+
+    

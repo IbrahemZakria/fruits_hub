@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/create_account.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/login_view.dart';
 import 'package:fruit_hub/features/best_selling_fruits/presentation/pages/best_selling_page.dart';
+import 'package:fruit_hub/features/check_out/presentation/pages/check_out_page.dart';
 import 'package:fruit_hub/features/home/presentation/pages/main_home_page.dart';
 import 'package:fruit_hub/features/onpoarding/presentation/pages/on_boarding_view.dart';
 import 'package:fruit_hub/features/splash/presentation/pages/splash_view.dart';
@@ -20,6 +21,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => MainHomePage());
     case BestSellingPage.routeName:
       return MaterialPageRoute(builder: (context) => BestSellingPage());
+    case CheckOutPage.routeName:
+      return MaterialPageRoute(builder: (context) => CheckOutPage());
 
     default:
       return MaterialPageRoute(

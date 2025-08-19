@@ -4,8 +4,15 @@ import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, required this.titel});
+  CustomAppBar({
+    super.key,
+    required this.titel,
+    this.notificationVisabilty = true,
+    this.arrowbackVisabilty = false,
+  });
   final String titel;
+  bool notificationVisabilty;
+  bool arrowbackVisabilty;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +20,20 @@ class CustomAppBar extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Row(
         children: [
+          Visibility(
+            visible: arrowbackVisabilty,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: SvgPicture.asset(
+                width: 11,
+
+                Assets.assetsImagesArrowBack,
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
           Expanded(
             child: Align(
               alignment: Alignment.center,
@@ -24,17 +45,20 @@ class CustomAppBar extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.centerLeft,
-            child: CircleAvatar(
-              radius: 25,
+            child: Visibility(
+              visible: notificationVisabilty,
+              child: CircleAvatar(
+                radius: 25,
 
-              backgroundColor: Color(0xffEEF8ED),
-              child: Padding(
-                padding: const EdgeInsets.all(7.0),
-                child: SvgPicture.asset(
-                  width: 34,
+                backgroundColor: Color(0xffEEF8ED),
+                child: Padding(
+                  padding: const EdgeInsets.all(7.0),
+                  child: SvgPicture.asset(
+                    width: 34,
 
-                  Assets.assetsImagesNotificationIcon,
-                  fit: BoxFit.fill,
+                    Assets.assetsImagesNotificationIcon,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),

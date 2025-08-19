@@ -145,6 +145,29 @@
  , "@cartItemsCount": {
             "placeholders": {
                   "count": {}
-            }}
+            }},
+  "paymentAmount": "Payment {amount} EGP",
+  "@paymentAmount": {
+    "description": "Payment message with variable amount",
+    "placeholders": {
+      "amount": {
+        "type": "double",
+        "example": "120"
+      }
+    }},
+  "payment": "Payment",
+  "@payment": {},
+  "address": "Address",
+  "@address": {},
+  "shipping": "Shipping",
+  "@shipping": {},
+"confirm_continue": "Confirm & Continue",
+"@confirm_continue": {},
+
+"next": "Next",
+"@next": {}
+
+
+
 
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/utils/widgts/custom_app_bar.dart';
 import 'package:fruit_hub/core/utils/widgts/custom_button.dart';
+import 'package:fruit_hub/features/check_out/presentation/pages/check_out_page.dart';
 import 'package:fruit_hub/features/home/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/cart_widgets/card_list_view.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/cart_widgets/custom_divider.dart';
@@ -48,8 +49,10 @@ class CartPageBody extends StatelessWidget {
             left: 16,
             bottom: MediaQuery.sizeOf(context).height * .05,
             child: CustomButton(
-              onTap: () {},
-              text: S.current.cartItemsCount(
+              onTap: () {
+                Navigator.pushNamed(context, CheckOutPage.routeName);
+              },
+              text: S.current.paymentAmount(
                 context.read<CartCubit>().cartEntity.calculateTotalPrice(),
               ),
             ),

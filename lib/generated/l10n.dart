@@ -18,10 +18,8 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(
-      _current != null,
-      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
-    );
+    assert(_current != null,
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
@@ -43,10 +41,8 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(
-      instance != null,
-      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
-    );
+    assert(instance != null,
+        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
@@ -56,12 +52,22 @@ class S {
 
   /// `Skip`
   String get skip {
-    return Intl.message('Skip', name: 'skip', desc: '', args: []);
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Welcome to`
   String get Welcome_to {
-    return Intl.message('Welcome to', name: 'Welcome_to', desc: '', args: []);
+    return Intl.message(
+      'Welcome to',
+      name: 'Welcome_to',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.`
@@ -96,7 +102,12 @@ class S {
 
   /// `Start Now`
   String get start_now {
-    return Intl.message('Start Now', name: 'start_now', desc: '', args: []);
+    return Intl.message(
+      'Start Now',
+      name: 'start_now',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Please enter your password`
@@ -111,12 +122,22 @@ class S {
 
   /// `Password`
   String get password {
-    return Intl.message('Password', name: 'password', desc: '', args: []);
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Email`
   String get Email {
-    return Intl.message('Email', name: 'Email', desc: '', args: []);
+    return Intl.message(
+      'Email',
+      name: 'Email',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Wrong password`
@@ -141,7 +162,12 @@ class S {
 
   /// `Login`
   String get login {
-    return Intl.message('Login', name: 'login', desc: '', args: []);
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `A text message has been sent to {phoneNumber}, enter the 4-digit code`
@@ -166,7 +192,12 @@ class S {
 
   /// `Confirm`
   String get confirm {
-    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+    return Intl.message(
+      'Confirm',
+      name: 'confirm',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Change Password`
@@ -231,12 +262,22 @@ class S {
 
   /// `Contact Us`
   String get contact_us {
-    return Intl.message('Contact Us', name: 'contact_us', desc: '', args: []);
+    return Intl.message(
+      'Contact Us',
+      name: 'contact_us',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `About Us`
   String get about_us {
-    return Intl.message('About Us', name: 'about_us', desc: '', args: []);
+    return Intl.message(
+      'About Us',
+      name: 'about_us',
+      desc: '',
+      args: [],
+    );
   }
 
   /// ` Forgot Password`
@@ -261,7 +302,12 @@ class S {
 
   /// `OTP`
   String get otp {
-    return Intl.message('OTP', name: 'otp', desc: '', args: []);
+    return Intl.message(
+      'OTP',
+      name: 'otp',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `plase enter a valid data`
@@ -316,7 +362,12 @@ class S {
 
   /// `or`
   String get or {
-    return Intl.message('or', name: 'or', desc: '', args: []);
+    return Intl.message(
+      'or',
+      name: 'or',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Login with googel`
@@ -351,7 +402,12 @@ class S {
 
   /// `New account`
   String get new_account {
-    return Intl.message('New account', name: 'new_account', desc: '', args: []);
+    return Intl.message(
+      'New account',
+      name: 'new_account',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `please enter your name`
@@ -366,7 +422,12 @@ class S {
 
   /// `All name`
   String get name {
-    return Intl.message('All name', name: 'name', desc: '', args: []);
+    return Intl.message(
+      'All name',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Alredy have an account ? `
@@ -551,27 +612,52 @@ class S {
 
   /// `More`
   String get more {
-    return Intl.message('More', name: 'more', desc: '', args: []);
+    return Intl.message(
+      'More',
+      name: 'more',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Home`
   String get home {
-    return Intl.message('Home', name: 'home', desc: '', args: []);
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Products`
   String get products {
-    return Intl.message('Products', name: 'products', desc: '', args: []);
+    return Intl.message(
+      'Products',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `My Account`
   String get profile {
-    return Intl.message('My Account', name: 'profile', desc: '', args: []);
+    return Intl.message(
+      'My Account',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Shopping Cart`
   String get cart {
-    return Intl.message('Shopping Cart', name: 'cart', desc: '', args: []);
+    return Intl.message(
+      'Shopping Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Good morning!..`
@@ -594,6 +680,66 @@ class S {
       name: 'cartItemsCount',
       desc: '',
       args: [count],
+    );
+  }
+
+  /// `Payment {amount} EGP`
+  String paymentAmount(double amount) {
+    return Intl.message(
+      'Payment $amount EGP',
+      name: 'paymentAmount',
+      desc: 'Payment message with variable amount',
+      args: [amount],
+    );
+  }
+
+  /// `Payment`
+  String get payment {
+    return Intl.message(
+      'Payment',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping`
+  String get shipping {
+    return Intl.message(
+      'Shipping',
+      name: 'shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm & Continue`
+  String get confirm_continue {
+    return Intl.message(
+      'Confirm & Continue',
+      name: 'confirm_continue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
     );
   }
 }
