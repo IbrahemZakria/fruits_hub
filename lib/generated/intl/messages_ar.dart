@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(amount) => "الدفع ${amount} جنيه";
 
+  static String m4(amount) => "${amount} جنيه";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
@@ -51,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
         "cartItemsCount": m1,
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("الدفع عند الاستلام"),
         "change_password":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "change_password_message": m2,
@@ -64,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "create_account":
             MessageLookupByLibrary.simpleMessage(" إنشاء حساب جديد"),
+        "delivery_from_store":
+            MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
         "did_you_forgot_password":
             MessageLookupByLibrary.simpleMessage(" هل نسيت كلمة المرور؟"),
         "dont_have_an_account":
@@ -110,12 +116,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير متطابقة"),
         "passwords_dose_not_match":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير متطابقة"),
+        "pay_online": MessageLookupByLibrary.simpleMessage("الدفع أونلاين"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "paymentAmount": m3,
         "platformError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ في النظام. يرجى المحاولة مرة أخرى."),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "لو سمحت ادخل ايميل صالح لاستخدام"),
+        "please_select_payment":
+            MessageLookupByLibrary.simpleMessage("يرجى تحديد طريقة الدفع"),
+        "price": m4,
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
         "required_password":

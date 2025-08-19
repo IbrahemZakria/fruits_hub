@@ -169,5 +169,23 @@
 
 
 
+,
+
+
+"delivery_from_store": "Delivery from store",
+"@delivery_from_store": {},
+
+"cash_on_delivery": "Cash on Delivery",
+"@cash_on_delivery": {}
+    ,"price": "{amount} EGP",
+"@price": {
+  "placeholders": {
+    "amount": {
+    }
+  }},"pay_online": "Pay Online",
+"@pay_online": {},
+
+"please_select_payment": "Please select a payment method",
+"@please_select_payment": {}
 
 }

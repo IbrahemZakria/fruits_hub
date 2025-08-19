@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m3(amount) => "Payment ${amount} EGP";
 
+  static String m4(amount) => "${amount} EGP";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -51,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best selling"),
         "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
         "cartItemsCount": m1,
+        "cash_on_delivery":
+            MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "change_password":
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "change_password_message": m2,
@@ -64,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("create account"),
+        "delivery_from_store":
+            MessageLookupByLibrary.simpleMessage("Delivery from store"),
         "did_you_forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "dont_have_an_account":
@@ -111,12 +117,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "passwords_dose_not_match":
             MessageLookupByLibrary.simpleMessage("Passwords dose not match"),
+        "pay_online": MessageLookupByLibrary.simpleMessage("Pay Online"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "paymentAmount": m3,
         "platformError": MessageLookupByLibrary.simpleMessage(
             "A platform error occurred. Please try again."),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
+        "please_select_payment": MessageLookupByLibrary.simpleMessage(
+            "Please select a payment method"),
+        "price": m4,
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("My Account"),
         "required_password":

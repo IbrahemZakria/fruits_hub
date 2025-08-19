@@ -168,7 +168,25 @@
 "@confirm_continue": {},
 
 "next": "التالي",
-"@next": {}
+"@next": {},
+
+"delivery_from_store": "التسليم من المكان",
+"@delivery_from_store": {},
+
+"cash_on_delivery": "الدفع عند الاستلام",
+"@cash_on_delivery": {}
+,"price": "{amount} جنيه"
+,"@price": {
+"placeholders": {
+"amount": {}
+}
+},
+"pay_online": "الدفع أونلاين",
+"@pay_online": {},
+
+"please_select_payment": "يرجى تحديد طريقة الدفع",
+"@please_select_payment": {}
+
 
 
 }

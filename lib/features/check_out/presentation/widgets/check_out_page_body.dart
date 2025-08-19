@@ -65,7 +65,13 @@ class _CheckOutPageBodyState extends State<CheckOutPageBody> {
                       right: 0,
                       bottom: MediaQuery.sizeOf(context).height * .1,
                       child: CustomButton(
-                        onTap: () {},
+                        onTap: () {
+                          pageController.animateToPage(
+                            curentIndex + 1,
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.easeInOut,
+                          );
+                        },
                         text: curentIndex != 2
                             ? S.current.next
                             : S.current.confirm_continue,

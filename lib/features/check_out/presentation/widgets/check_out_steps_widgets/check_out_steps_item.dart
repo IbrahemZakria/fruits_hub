@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 
@@ -21,7 +20,11 @@ class CheckOutStepsItem extends StatelessWidget {
       child: GestureDetector(
         onTap: isSelected
             ? () {
-                pageController.jumpToPage(index);
+                pageController.animateToPage(
+                  index,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
               }
             : () {},
         child: Row(
