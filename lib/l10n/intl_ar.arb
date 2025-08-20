@@ -185,7 +185,42 @@
 "@pay_online": {},
 
 "please_select_payment": "يرجى تحديد طريقة الدفع",
-"@please_select_payment": {}
+"@please_select_payment": {},
+
+"please_enter_address": "لو سمحت ادخل العنوان",
+"@please_enter_address": {},
+
+"please_enter_city": "لو سمحت ادخل المدينه",
+"@please_enter_city": {},
+
+"city": "المدينه",
+"@city": {},
+
+"floor_apartment": "رقم الطابق , رقم الشقه ..",
+"@floor_apartment": {},
+
+"please_enter_floor_apartment": "لو سمحت ادخل رقم الطابق , رقم الشقه ..",
+"@please_enter_floor_apartment": {},"total": "الكلي",
+"@total": {},
+
+"delivery": "التوصيل :",
+"@delivery": {},
+
+"subtotal": "المجموع الفرعي :",
+"@subtotal": {},
+
+"order_summary": "ملخص الطلب :",
+"@order_summary": {},"pound":"جنيه",
+"@pound": {},"delivery_address": "عنوان التوصيل",
+"@delivery_address": {},"edit": "تعديل",
+"@edit": {},"item_removed_from_cart": "تم حذف العنصر من السلة",
+"@item_removed_from_cart": {},
+
+"cart_is_empty": "السلة فارغة",
+"@cart_is_empty": {}
+
+
+
 
 
 

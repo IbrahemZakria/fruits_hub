@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/assets.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 
+// ignore: must_be_immutable
 class CustomAppBar extends StatelessWidget {
   CustomAppBar({
     super.key,

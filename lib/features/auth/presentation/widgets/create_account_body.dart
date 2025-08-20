@@ -95,7 +95,7 @@ class _CreateAccountBodyState extends State<CreateAccountBody> {
                       );
                     }
                   } else {
-                    Usermessage.show(
+                    showUserMessage(
                       message: local.acceptTerms,
                       backgroundColor: Colors.redAccent,
                     );

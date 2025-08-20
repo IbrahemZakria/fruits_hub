@@ -53,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best selling"),
         "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
         "cartItemsCount": m1,
+        "cart_is_empty":
+            MessageLookupByLibrary.simpleMessage("Your cart is empty"),
         "cash_on_delivery":
             MessageLookupByLibrary.simpleMessage("Cash on Delivery"),
         "change_password":
@@ -60,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_password_message": m2,
         "checkbox_content": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to our"),
+        "city": MessageLookupByLibrary.simpleMessage("City"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirm_continue":
             MessageLookupByLibrary.simpleMessage("Confirm & Continue"),
@@ -68,16 +71,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact Us"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("create account"),
+        "delivery": MessageLookupByLibrary.simpleMessage("Delivery:"),
+        "delivery_address":
+            MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "delivery_from_store":
             MessageLookupByLibrary.simpleMessage("Delivery from store"),
         "did_you_forgot_password":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("don\'t have an account ? "),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
             "The account already exists for that email."),
         "enter_id":
             MessageLookupByLibrary.simpleMessage("Enter your ID number"),
+        "floor_apartment": MessageLookupByLibrary.simpleMessage(
+            "Floor number, Apartment number .."),
         "forgot_password":
             MessageLookupByLibrary.simpleMessage(" Forgot Password"),
         "goodMorning": MessageLookupByLibrary.simpleMessage("Good morning!.."),
@@ -88,6 +97,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
             "There is a problem with the email or password"),
+        "item_removed_from_cart": MessageLookupByLibrary.simpleMessage(
+            "Item has been removed from the cart"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginSuccess":
             MessageLookupByLibrary.simpleMessage("Login successful"),
@@ -109,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoarSubTitle2": MessageLookupByLibrary.simpleMessage(
             "We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to make sure you\'re choosing the perfect fruit."),
         "or": MessageLookupByLibrary.simpleMessage("or"),
+        "order_summary": MessageLookupByLibrary.simpleMessage("Order Summary:"),
         "otp": MessageLookupByLibrary.simpleMessage("OTP"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_changed_successfully": MessageLookupByLibrary.simpleMessage(
@@ -122,10 +134,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentAmount": m3,
         "platformError": MessageLookupByLibrary.simpleMessage(
             "A platform error occurred. Please try again."),
+        "please_enter_address":
+            MessageLookupByLibrary.simpleMessage("Please enter the address"),
+        "please_enter_city":
+            MessageLookupByLibrary.simpleMessage("Please enter the city"),
+        "please_enter_floor_apartment": MessageLookupByLibrary.simpleMessage(
+            "Please enter floor number, apartment number .."),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
         "please_select_payment": MessageLookupByLibrary.simpleMessage(
             "Please select a payment method"),
+        "pound": MessageLookupByLibrary.simpleMessage("pound"),
         "price": m4,
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("My Account"),
@@ -141,8 +160,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sign-up successful"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "start_now": MessageLookupByLibrary.simpleMessage("Start Now"),
+        "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal:"),
         "timeout": MessageLookupByLibrary.simpleMessage(
             "The request timed out. Please check your connection."),
+        "total": MessageLookupByLibrary.simpleMessage("Total"),
         "unknownError": MessageLookupByLibrary.simpleMessage(
             "An unknown error occurred: please try again later"),
         "weakPassword": MessageLookupByLibrary.simpleMessage(

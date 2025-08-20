@@ -792,6 +792,146 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter the address`
+  String get please_enter_address {
+    return Intl.message(
+      'Please enter the address',
+      name: 'please_enter_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the city`
+  String get please_enter_city {
+    return Intl.message(
+      'Please enter the city',
+      name: 'please_enter_city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get city {
+    return Intl.message(
+      'City',
+      name: 'city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Floor number, Apartment number ..`
+  String get floor_apartment {
+    return Intl.message(
+      'Floor number, Apartment number ..',
+      name: 'floor_apartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter floor number, apartment number ..`
+  String get please_enter_floor_apartment {
+    return Intl.message(
+      'Please enter floor number, apartment number ..',
+      name: 'please_enter_floor_apartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery:`
+  String get delivery {
+    return Intl.message(
+      'Delivery:',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtotal:`
+  String get subtotal {
+    return Intl.message(
+      'Subtotal:',
+      name: 'subtotal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Summary:`
+  String get order_summary {
+    return Intl.message(
+      'Order Summary:',
+      name: 'order_summary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `pound`
+  String get pound {
+    return Intl.message(
+      'pound',
+      name: 'pound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Address`
+  String get delivery_address {
+    return Intl.message(
+      'Delivery Address',
+      name: 'delivery_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Item has been removed from the cart`
+  String get item_removed_from_cart {
+    return Intl.message(
+      'Item has been removed from the cart',
+      name: 'item_removed_from_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your cart is empty`
+  String get cart_is_empty {
+    return Intl.message(
+      'Your cart is empty',
+      name: 'cart_is_empty',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

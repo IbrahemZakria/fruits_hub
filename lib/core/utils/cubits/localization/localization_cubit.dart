@@ -20,7 +20,7 @@ class LocalizationCubit extends Cubit<LocalizationState> {
 
       emit(LanguageChangedState(lang));
     } else {
-      Usermessage.show(message: "message");
+      showUserMessage(message: "message");
       emit(LanguageChangedState(lang));
     }
   }

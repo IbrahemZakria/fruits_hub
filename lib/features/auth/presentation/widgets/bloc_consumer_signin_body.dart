@@ -16,14 +16,14 @@ class BlocConsumerSigninBody extends StatelessWidget {
     return BlocConsumer<SignInCubit, SignInState>(
       listener: (context, state) {
         if (state is SignInSuccessState) {
-          Usermessage.show(
+          showUserMessage(
             backgroundColor: Thems.kLightprimarycolor,
             message: "${S.current.loginSuccess} : ${state.user.email}",
           );
           Navigator.pushReplacementNamed(context, MainHomePage.routeName);
           // Handle successful sign-up, e.g., navigate to home page
         } else if (state is SignInFailureState) {
-          Usermessage.show(
+          showUserMessage(
             backgroundColor: Colors.redAccent,
             message: " ${state.errorMessage}",
           );

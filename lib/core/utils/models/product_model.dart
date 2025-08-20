@@ -1,6 +1,7 @@
 import 'package:fruit_hub/core/utils/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/models/review_model.dart';
 
+// ignore: must_be_immutable
 class ProductModel extends ProductEntity {
   int? amount;
   String? productUnit;

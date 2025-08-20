@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:fruit_hub/core/utils/entities/review_entity.dart';
 
+// ignore: must_be_immutable
 class ProductEntity extends Equatable {
   int? amount;
   String? productUnit;

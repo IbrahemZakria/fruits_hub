@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/core/utils/app_decoration.dart';
 import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/features/check_out/presentation/widgets/shipping_page_widgets/shiping_check_box.dart';
 
@@ -20,9 +21,7 @@ class ShippingItem extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: AnimatedContainer(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(4),
-          color: Thems.lightgray,
+        decoration: AppDecoration.greyBoxDecoration.copyWith(
           border: Border.all(
             color: isSelected ? Thems.kprimarycolor : Colors.transparent,
           ),

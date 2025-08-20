@@ -186,6 +186,42 @@
 "@pay_online": {},
 
 "please_select_payment": "Please select a payment method",
-"@please_select_payment": {}
+"@please_select_payment": {},"please_enter_address": "Please enter the address",
+"@please_enter_address": {},
+
+"please_enter_city": "Please enter the city",
+"@please_enter_city": {},
+
+"city": "City",
+"@city": {},
+
+"floor_apartment": "Floor number, Apartment number ..",
+"@floor_apartment": {},
+
+"please_enter_floor_apartment": "Please enter floor number, apartment number ..",
+"@please_enter_floor_apartment": {},"total": "Total",
+"@total": {},
+
+"delivery": "Delivery:",
+"@delivery": {},
+
+"subtotal": "Subtotal:",
+"@subtotal": {},
+
+"order_summary": "Order Summary:",
+"@order_summary": {}
+,"pound":"pound",
+"@pound": {},
+"delivery_address": "Delivery Address",
+"@delivery_address": {},"edit": "Edit",
+"@edit": {},
+"item_removed_from_cart": "Item has been removed from the cart",
+"@item_removed_from_cart": {},
+
+"cart_is_empty": "Your cart is empty",
+"@cart_is_empty": {}
+
+
+
 
 }

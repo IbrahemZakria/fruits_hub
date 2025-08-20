@@ -16,7 +16,7 @@ class BlocConsumerSignupBody extends StatelessWidget {
     return BlocConsumer<SignUpCubit, SignUpState>(
       listener: (context, state) {
         if (state is SignUpSuccessState) {
-          Usermessage.show(
+          showUserMessage(
             backgroundColor: Thems.kLightprimarycolor,
 
             message: "${S.current.signUpSuccess} : ${state.user.name}",
@@ -25,7 +25,7 @@ class BlocConsumerSignupBody extends StatelessWidget {
 
           // Handle successful sign-up, e.g., navigate to home page
         } else if (state is SignUpFailureState) {
-          Usermessage.show(
+          showUserMessage(
             backgroundColor: Colors.redAccent,
             message: " ${state.errorMessage}",
           );
