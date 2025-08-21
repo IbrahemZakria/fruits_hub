@@ -219,7 +219,15 @@
 "@item_removed_from_cart": {},
 
 "cart_is_empty": "Your cart is empty",
-"@cart_is_empty": {}
+"@cart_is_empty": {},"phone": "Phone",
+"@phone": {},
+
+"please_enter_phone": "Please enter your phone number",
+"@please_enter_phone": {},
+"choose_payment_method": "Choose payment method",
+"@choose_payment_method": {}
+
+
 
 
 

@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_password_message": m2,
         "checkbox_content": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you agree to our"),
+        "choose_payment_method":
+            MessageLookupByLibrary.simpleMessage("Choose payment method"),
         "city": MessageLookupByLibrary.simpleMessage("City"),
         "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
         "confirm_continue":
@@ -132,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pay_online": MessageLookupByLibrary.simpleMessage("Pay Online"),
         "payment": MessageLookupByLibrary.simpleMessage("Payment"),
         "paymentAmount": m3,
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "platformError": MessageLookupByLibrary.simpleMessage(
             "A platform error occurred. Please try again."),
         "please_enter_address":
@@ -140,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter the city"),
         "please_enter_floor_apartment": MessageLookupByLibrary.simpleMessage(
             "Please enter floor number, apartment number .."),
+        "please_enter_phone": MessageLookupByLibrary.simpleMessage(
+            "Please enter your phone number"),
         "please_enter_valid_email":
             MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
         "please_select_payment": MessageLookupByLibrary.simpleMessage(

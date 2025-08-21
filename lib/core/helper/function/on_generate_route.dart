@@ -3,6 +3,7 @@ import 'package:fruit_hub/features/auth/presentation/pages/create_account.dart';
 import 'package:fruit_hub/features/auth/presentation/pages/login_view.dart';
 import 'package:fruit_hub/features/best_selling_fruits/presentation/pages/best_selling_page.dart';
 import 'package:fruit_hub/features/check_out/presentation/pages/check_out_page.dart';
+import 'package:fruit_hub/features/home/domain/entities/cart_entity.dart';
 import 'package:fruit_hub/features/home/presentation/pages/main_home_page.dart';
 import 'package:fruit_hub/features/onpoarding/presentation/pages/on_boarding_view.dart';
 import 'package:fruit_hub/features/splash/presentation/pages/splash_view.dart';
@@ -22,7 +23,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case BestSellingPage.routeName:
       return MaterialPageRoute(builder: (context) => BestSellingPage());
     case CheckOutPage.routeName:
-      return MaterialPageRoute(builder: (context) => CheckOutPage());
+      return MaterialPageRoute(
+        builder: (context) =>
+            CheckOutPage(cartEntity: settings.arguments as CartEntity),
+      );
 
     default:
       return MaterialPageRoute(

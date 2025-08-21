@@ -61,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_password_message": m2,
         "checkbox_content": MessageLookupByLibrary.simpleMessage(
             "من خلال إنشاء حساب ، فإنك توافق على"),
+        "choose_payment_method":
+            MessageLookupByLibrary.simpleMessage("اختر طريقة الدفع"),
         "city": MessageLookupByLibrary.simpleMessage("المدينه"),
         "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
         "confirm_continue":
@@ -130,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pay_online": MessageLookupByLibrary.simpleMessage("الدفع أونلاين"),
         "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
         "paymentAmount": m3,
+        "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "platformError": MessageLookupByLibrary.simpleMessage(
             "حدث خطأ في النظام. يرجى المحاولة مرة أخرى."),
         "please_enter_address":
@@ -138,6 +141,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لو سمحت ادخل المدينه"),
         "please_enter_floor_apartment": MessageLookupByLibrary.simpleMessage(
             "لو سمحت ادخل رقم الطابق , رقم الشقه .."),
+        "please_enter_phone":
+            MessageLookupByLibrary.simpleMessage("لو سمحت ادخل رقم الهاتف"),
         "please_enter_valid_email": MessageLookupByLibrary.simpleMessage(
             "لو سمحت ادخل ايميل صالح لاستخدام"),
         "please_select_payment":

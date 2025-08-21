@@ -932,6 +932,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Phone`
+  String get phone {
+    return Intl.message(
+      'Phone',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your phone number`
+  String get please_enter_phone {
+    return Intl.message(
+      'Please enter your phone number',
+      name: 'please_enter_phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose payment method`
+  String get choose_payment_method {
+    return Intl.message(
+      'Choose payment method',
+      name: 'choose_payment_method',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

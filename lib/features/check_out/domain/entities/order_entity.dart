@@ -3,8 +3,8 @@ import 'package:fruit_hub/features/home/domain/entities/cart_entity.dart';
 
 class OrderEntity {
   final CartEntity cartentity;
-  final bool? payWithCash;
-  final AdressEntity? adressEntity;
+  bool? payWithCash;
+  AdressEntity adressEntity = AdressEntity();
 
-  OrderEntity({required this.cartentity, this.payWithCash, this.adressEntity});
+  OrderEntity({required this.cartentity, this.payWithCash});
 }

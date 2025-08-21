@@ -217,7 +217,13 @@
 "@item_removed_from_cart": {},
 
 "cart_is_empty": "السلة فارغة",
-"@cart_is_empty": {}
+"@cart_is_empty": {},"phone": "الهاتف",
+"@phone": {},
+
+"please_enter_phone": "لو سمحت ادخل رقم الهاتف",
+"@please_enter_phone": {}
+,"choose_payment_method": "اختر طريقة الدفع",
+"@choose_payment_method": {}
 
 
 

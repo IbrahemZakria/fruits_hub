@@ -11,7 +11,7 @@ class OrderSummaryItem extends StatelessWidget {
   });
   final TextStyle style;
   final String titel;
-  final int price;
+  final double price;
   @override
   Widget build(BuildContext context) {
     return Row(

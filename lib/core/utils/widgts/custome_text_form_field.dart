@@ -7,6 +7,7 @@ class CustomeTextFormField extends StatelessWidget {
     super.key,
     this.obscureText = false,
     this.hintText,
+    this.onchanged,
     this.onSaved,
     this.prefixIcon,
     this.suffixIcon,
@@ -21,7 +22,8 @@ class CustomeTextFormField extends StatelessWidget {
   double? borderRadius;
   String? hintText;
   String? Function(String?)? validator;
-  Function(String)? onSaved;
+  Function(String)? onchanged;
+  void Function(String?)? onSaved;
   bool obscureText;
   IconButton? prefixIcon;
 
@@ -41,12 +43,13 @@ class CustomeTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
       enableSuggestions: true,
       controller: controller,
       validator: (value) {
         return validator != null ? validator!(value) : null;
       },
-      onChanged: onSaved,
+      onChanged: onchanged,
       maxLines: maxLines ?? 1,
       style: TextStyle(color: textColor),
       obscureText: obscureText,

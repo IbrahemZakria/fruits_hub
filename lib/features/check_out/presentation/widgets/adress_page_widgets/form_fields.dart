@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/core/utils/widgts/custome_text_form_field.dart';
+import 'package:fruit_hub/features/check_out/domain/entities/order_entity.dart';
 import 'package:fruit_hub/generated/l10n.dart';
 
 class FormFields extends StatelessWidget {
@@ -11,21 +13,25 @@ class FormFields extends StatelessWidget {
     required this.city,
     required this.appartement,
 
-    required this.numberOfMonthExpiration,
+    required this.phone,
   });
+
+  final TextEditingController phone;
   final TextEditingController name;
   final TextEditingController email;
   final TextEditingController adress;
   final TextEditingController city;
   final TextEditingController appartement;
 
-  final TextEditingController numberOfMonthExpiration;
-
   @override
   Widget build(BuildContext context) {
+    var read = context.read<OrderEntity>().adressEntity;
     return Column(
       children: [
         CustomeTextFormField(
+          onSaved: (value) {
+            read.name = value;
+          },
           controller: name,
           hintText: S.current.name,
           validator: (value) {
@@ -38,7 +44,10 @@ class FormFields extends StatelessWidget {
         ),
         SizedBox(height: 16),
         CustomeTextFormField(
-          textType: TextInputType.number,
+          onSaved: (value) {
+            read.email = value;
+          },
+          textType: TextInputType.emailAddress,
           controller: email,
           hintText: S.current.Email,
           validator: (value) {
@@ -51,6 +60,9 @@ class FormFields extends StatelessWidget {
         ),
         SizedBox(height: 16),
         CustomeTextFormField(
+          onSaved: (value) {
+            read.adress = value;
+          },
           controller: adress,
           hintText: S.current.address,
           validator: (value) {
@@ -63,8 +75,10 @@ class FormFields extends StatelessWidget {
         ),
         SizedBox(height: 16),
         CustomeTextFormField(
-          textType: TextInputType.number,
-          controller: appartement,
+          onSaved: (value) {
+            read.adressDetails = value;
+          },
+          controller: city,
           hintText: S.current.city,
           validator: (value) {
             if (value == null || value.isEmpty) {
@@ -77,9 +91,7 @@ class FormFields extends StatelessWidget {
         SizedBox(height: 16),
 
         CustomeTextFormField(
-          textType: TextInputType.number,
-
-          controller: numberOfMonthExpiration,
+          controller: appartement,
           hintText: S.current.floor_apartment,
           validator: (value) {
             if (value == null || value.isEmpty) {
@@ -92,12 +104,14 @@ class FormFields extends StatelessWidget {
 
         SizedBox(height: 16),
         CustomeTextFormField(
-          controller: city,
-          maxLines: 5,
-          hintText: " produt description",
+          onSaved: (value) {
+            read.name = value;
+          },
+          controller: phone,
+          hintText: S.current.phone,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return "please enter your product description";
+              return S.current.please_enter_phone;
             }
 
             return null; // valid
