@@ -225,7 +225,11 @@
 "please_enter_phone": "Please enter your phone number",
 "@please_enter_phone": {},
 "choose_payment_method": "Choose payment method",
-"@choose_payment_method": {}
+"@choose_payment_method": {},"item_added_to_cart": "Mango has been added to the cart",
+"@item_added_to_cart": {},"operation_success": "Operation completed successfully",
+"@operation_success": {}
+
+
 
 
 

@@ -15,6 +15,7 @@ class FruitCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Container(
       decoration: BoxDecoration(
         color: Thems.lightgray,
@@ -84,9 +85,6 @@ class FruitCard extends StatelessWidget {
                               ),
                             ),
                           ],
-                          // text: "${fruit.price}  / الكيلو",
-
-                          // Add more children TextSpans here if needed
                         ),
                       ),
                     ],

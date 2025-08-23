@@ -962,6 +962,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Mango has been added to the cart`
+  String get item_added_to_cart {
+    return Intl.message(
+      'Mango has been added to the cart',
+      name: 'item_added_to_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Operation completed successfully`
+  String get operation_success {
+    return Intl.message(
+      'Operation completed successfully',
+      name: 'operation_success',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

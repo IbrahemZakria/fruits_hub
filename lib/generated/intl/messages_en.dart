@@ -99,6 +99,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
             "There is a problem with the email or password"),
+        "item_added_to_cart": MessageLookupByLibrary.simpleMessage(
+            "Mango has been added to the cart"),
         "item_removed_from_cart": MessageLookupByLibrary.simpleMessage(
             "Item has been removed from the cart"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -121,6 +123,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality."),
         "onBoarSubTitle2": MessageLookupByLibrary.simpleMessage(
             "We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to make sure you\'re choosing the perfect fruit."),
+        "operation_success": MessageLookupByLibrary.simpleMessage(
+            "Operation completed successfully"),
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "order_summary": MessageLookupByLibrary.simpleMessage("Order Summary:"),
         "otp": MessageLookupByLibrary.simpleMessage("OTP"),

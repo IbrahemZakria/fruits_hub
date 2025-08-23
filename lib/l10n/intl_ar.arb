@@ -223,7 +223,11 @@
 "please_enter_phone": "لو سمحت ادخل رقم الهاتف",
 "@please_enter_phone": {}
 ,"choose_payment_method": "اختر طريقة الدفع",
-"@choose_payment_method": {}
+"@choose_payment_method": {},"item_added_to_cart": "تم إضافة المنجا إلى السلة",
+"@item_added_to_cart": {}
+,"operation_success": "تمت العملية بنجاح",
+"@operation_success": {}
+
 
 
 

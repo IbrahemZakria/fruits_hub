@@ -9,12 +9,20 @@ class FireStoreServices implements DataBaseServices {
     required String path,
     required Map<String, dynamic> data,
     String? documentId,
+    String? supColection,
   }) async {
     try {
       CollectionReference collectionReference = firestore.collection(path);
 
       if (documentId != null) {
-        await collectionReference.doc(documentId).set(data);
+        if (supColection != null) {
+          await collectionReference
+              .doc(documentId)
+              .collection(supColection)
+              .add(data);
+        } else {
+          await collectionReference.doc(documentId).set(data);
+        }
       } else {
         await collectionReference.add(data);
       }

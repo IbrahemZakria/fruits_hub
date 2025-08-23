@@ -96,6 +96,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "invalidEmailOrPassword": MessageLookupByLibrary.simpleMessage(
             "يوجد مشكلة في البريد الإلكتروني أو كلمة المرور"),
+        "item_added_to_cart":
+            MessageLookupByLibrary.simpleMessage("تم إضافة المنجا إلى السلة"),
         "item_removed_from_cart":
             MessageLookupByLibrary.simpleMessage("تم حذف العنصر من السلة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -119,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية."),
         "onBoarSubTitle2": MessageLookupByLibrary.simpleMessage(
             "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
+        "operation_success":
+            MessageLookupByLibrary.simpleMessage("تمت العملية بنجاح"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "order_summary": MessageLookupByLibrary.simpleMessage("ملخص الطلب :"),
         "otp": MessageLookupByLibrary.simpleMessage(" التحقق الثنائى"),

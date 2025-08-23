@@ -15,7 +15,7 @@ class DeliveryAddressWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     {
-      log(context.read<OrderEntity>().adressEntity.adress!);
+      log(context.read<OrderEntity>().adressEntity.adress ?? "");
     }
     return Container(
       padding: EdgeInsets.symmetric(vertical: 8),
