@@ -1,5 +1,6 @@
 import 'package:fruit_hub/core/utils/entities/product_entity.dart';
 import 'package:fruit_hub/core/utils/models/review_model.dart';
+// ignore_for_file: annotate_overrides, overridden_fields
 
 // ignore: must_be_immutable
 class ProductModel extends ProductEntity {

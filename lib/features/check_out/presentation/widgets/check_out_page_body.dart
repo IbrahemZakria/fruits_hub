@@ -32,12 +32,6 @@ class _CheckOutPageBodyState extends State<CheckOutPageBody> {
   );
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
   void dispose() {
     pageController.dispose();
     valueNotifier.dispose();
@@ -51,10 +45,7 @@ class _CheckOutPageBodyState extends State<CheckOutPageBody> {
       AddressPage(formKey: formKey, autovalidateMode: valueNotifier),
       PaymentPage(),
     ];
-    return BlocConsumer<OrderCubit, OrderState>(
-      listener: (context, state) {
-        // TODO: implement listener
-      },
+    return BlocBuilder<OrderCubit, OrderState>(
       builder: (context, state) {
         return ModalProgressHUD(
           inAsyncCall: state is AddOrderLoadingstate,

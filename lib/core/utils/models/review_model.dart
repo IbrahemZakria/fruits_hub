@@ -1,3 +1,5 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 import 'package:fruit_hub/core/utils/entities/review_entity.dart';
 
 class ReviewModel extends ReviewEntity {

@@ -10,12 +10,13 @@ class SelectedItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // width: MediaQuery.of(context).size.width * .2,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Thems.lightgray,
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
+
         children: [
           CircleAvatar(
             radius: 15,
@@ -23,7 +24,9 @@ class SelectedItem extends StatelessWidget {
             child: SvgPicture.asset(bottomAppBarEntity.slectedImage),
           ),
           SizedBox(width: 8),
-          Text(bottomAppBarEntity.title, style: Thems.textStyle11sB),
+          Flexible(
+            child: Text(bottomAppBarEntity.title, style: Thems.textStyle11sB),
+          ),
           SizedBox(width: 8),
         ],
       ),
