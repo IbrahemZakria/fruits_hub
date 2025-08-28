@@ -18,32 +18,31 @@ class CartPageBody extends StatelessWidget {
     return SafeArea(
       child: Stack(
         children: [
-          CustomScrollView(
-            slivers: [
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: CustomAppBar(titel: S.current.cart),
-                ),
-              ),
-              SliverToBoxAdapter(
-                child: ProductsNumberText(
-                  number: context
-                      .watch<CartCubit>()
-                      .cartEntity
-                      .cartProducts
-                      .length,
-                ),
-              ),
-              context.read<CartCubit>().cartEntity.cartProducts.isNotEmpty
-                  ? SliverToBoxAdapter(child: CustomDivider())
-                  : SliverToBoxAdapter(child: SizedBox()),
-
-              CardListView(),
-              context.read<CartCubit>().cartEntity.cartProducts.isNotEmpty
-                  ? SliverToBoxAdapter(child: CustomDivider())
-                  : SliverToBoxAdapter(child: SizedBox()),
-            ],
+          BlocBuilder<CartCubit, CartState>(
+            builder: (context, state) {
+              return CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: CustomAppBar(titel: S.current.cart),
+                    ),
+                  ),
+                  SliverToBoxAdapter(
+                    child: ProductsNumberText(
+                      number: CartCubit.cartEntity.cartProducts.length,
+                    ),
+                  ),
+                  CartCubit.cartEntity.cartProducts.isNotEmpty
+                      ? SliverToBoxAdapter(child: CustomDivider())
+                      : SliverToBoxAdapter(child: SizedBox()),
+                  CardListView(),
+                  CartCubit.cartEntity.cartProducts.isNotEmpty
+                      ? SliverToBoxAdapter(child: CustomDivider())
+                      : SliverToBoxAdapter(child: SizedBox()),
+                ],
+              );
+            },
           ),
           Positioned(
             right: 16,
@@ -51,22 +50,18 @@ class CartPageBody extends StatelessWidget {
             bottom: MediaQuery.sizeOf(context).height * .05,
             child: CustomButton(
               onTap: () {
-                if (context
-                    .read<CartCubit>()
-                    .cartEntity
-                    .cartProducts
-                    .isNotEmpty) {
+                if (CartCubit.cartEntity.cartProducts.isNotEmpty) {
                   Navigator.pushNamed(
                     context,
                     CheckOutPage.routeName,
-                    arguments: context.read<CartCubit>().cartEntity,
+                    arguments: CartCubit.cartEntity,
                   );
                 } else {
                   showUserMessage(message: S.current.cart_is_empty);
                 }
               },
               text: S.current.paymentAmount(
-                context.read<CartCubit>().cartEntity.calculateTotalPrice(),
+                CartCubit.cartEntity.calculateTotalPrice(),
               ),
             ),
           ),

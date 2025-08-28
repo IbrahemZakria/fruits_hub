@@ -7,6 +7,7 @@ import 'package:fruit_hub/core/utils/thems.dart';
 import 'package:fruit_hub/features/home/domain/entities/cart_item_entity.dart';
 import 'package:fruit_hub/features/home/presentation/cubit/cart_cubit/cart_cubit.dart';
 import 'package:fruit_hub/features/home/presentation/widgets/cart_widgets/cart_icon.dart';
+import 'package:fruit_hub/features/product_preview/presentation/pages/product_preview.dart';
 
 class CartCard extends StatelessWidget {
   const CartCard({super.key, required this.cartItemEntity});
@@ -20,20 +21,29 @@ class CartCard extends StatelessWidget {
         height: size.height * .11,
         child: Row(
           children: [
-            Container(
-              width: size.width * .19,
-              color: Thems.lightgray,
-              child: Center(
-                child: CachedNetworkImage(
-                  width: size.width * .14,
-                  fit: BoxFit.fitHeight,
-                  imageUrl: cartItemEntity.productEntity.imageUrl!,
-                  placeholder: (context, url) => Center(
-                    child: CircularProgressIndicator(
-                      color: Thems.kprimarycolor,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  ProductPreview.routeName,
+                  arguments: cartItemEntity.productEntity,
+                );
+              },
+              child: Container(
+                width: size.width * .19,
+                color: Thems.lightgray,
+                child: Center(
+                  child: CachedNetworkImage(
+                    width: size.width * .14,
+                    fit: BoxFit.fitHeight,
+                    imageUrl: cartItemEntity.productEntity.imageUrl!,
+                    placeholder: (context, url) => Center(
+                      child: CircularProgressIndicator(
+                        color: Thems.kprimarycolor,
+                      ),
                     ),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
                 ),
               ),
             ),

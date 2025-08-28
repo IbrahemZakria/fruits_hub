@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountExistsWithDifferentCredential":
             MessageLookupByLibrary.simpleMessage(
                 "هذا البريد مسجّل مسبقًا بطريقة تسجيل مختلفة. من فضلك استخدم طريقة تسجيل الدخول الأصلية."),
+        "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
         "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),

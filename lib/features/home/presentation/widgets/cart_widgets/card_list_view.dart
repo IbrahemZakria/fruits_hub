@@ -10,10 +10,7 @@ class CardListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CartItemEntity> cartItems = context
-        .read<CartCubit>()
-        .cartEntity
-        .cartProducts;
+    List<CartItemEntity> cartItems = CartCubit.cartEntity.cartProducts;
     return BlocBuilder<CartCubit, CartState>(
       builder: (context, state) {
         return SliverList.separated(

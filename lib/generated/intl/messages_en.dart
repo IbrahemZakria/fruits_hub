@@ -49,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountExistsWithDifferentCredential":
             MessageLookupByLibrary.simpleMessage(
                 "This email is already registered using a different sign-in method. Please use the original sign-in method."),
+        "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to Cart"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "bestSelling": MessageLookupByLibrary.simpleMessage("Best selling"),
         "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),

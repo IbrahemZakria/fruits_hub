@@ -12,7 +12,7 @@ part 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
   CartCubit() : super(CartInitial());
-  CartEntity cartEntity = CartEntity([]);
+  static CartEntity cartEntity = CartEntity([]);
   addProduct(ProductEntity product) {
     cartEntity.addProduct(product: product);
 
@@ -32,5 +32,12 @@ class CartCubit extends Cubit<CartState> {
     cartEntity.removeProductCart(product: product);
     emit(RemovrProductFromCartState(cartsItems: cartEntity.cartProducts));
     showUserMessage(message: S.current.item_removed_from_cart);
+  }
+
+  CartItemEntity? getCartItem(ProductEntity product) {
+    return cartEntity.cartProducts.firstWhere(
+      (element) => element.productEntity.productCode == product.productCode,
+      orElse: () => CartItemEntity(productEntity: product, productCount: 0),
+    );
   }
 }

@@ -226,7 +226,9 @@
 "@choose_payment_method": {},"item_added_to_cart": "تم إضافة المنجا إلى السلة",
 "@item_added_to_cart": {}
 ,"operation_success": "تمت العملية بنجاح",
-"@operation_success": {}
+"@operation_success": {},"add_to_cart": "أضف إلى السلة",
+"@add_to_cart": {}
+
 
 
 
